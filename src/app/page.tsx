@@ -36,8 +36,8 @@ export default function Home() {
             >
               {/* Staggered text */}
               <span className="block">BUILDING</span>
-              <span className="block ml-2 md:ml-4 lg:ml-8">SOFTWARE</span>
-              <span className="block ml-4 md:ml-8 lg:ml-12">INNOVATIONS</span>
+              <span className="block ml-2 md:ml-6 lg:ml-8">SOFTWARE</span>
+              <span className="block ml-4 md:ml-12 lg:ml-16">INNOVATIONS</span>
             </h1>
           </div>
         </div>
