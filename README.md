@@ -32,3 +32,8 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+
+## Note for Parsa 
+Here are some sources of inspiration:
+https://www.reddit.com/r/Frontend/comments/o1sbve/how_do_i_present_projects_on_my_portfolio_website/
