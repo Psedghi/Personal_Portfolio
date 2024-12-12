@@ -1,6 +1,15 @@
+"use client"; // Needed for client-side animations
+
 import Navbar from "@/components/Navbar";
+import { useState, useEffect } from "react";
 
 export default function About() {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    setIsReady(true); // Trigger the animation on mount
+  }, []);
+
   return (
     <div className="bg-[#280004] text-[#F0FFCE] flex flex-col min-h-screen w-full font-sans">
       {/* Navbar */}
@@ -9,14 +18,19 @@ export default function About() {
       <main className="flex flex-col items-center justify-center flex-grow px-4 md:px-12">
         {/* Title Section */}
         <h1
-          className="text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-12"
-          style={{ fontFamily: "Helvetica, sans-serif" }}
+          className={`text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-10 ${isReady ? "opacity-100 animate-fadeInUp" : "opacity-0"
+            }`}
+          style={{
+            fontFamily: "Helvetica, sans-serif",
+            letterSpacing: "-0.02em",
+            marginTop: "3rem", // Ensures uniform spacing from the top
+          }}
         >
           ABOUT PARSA
         </h1>
         <hr className="border-t-2 border-[#F0FFCE] w-1/3 mb-12" />
 
-        {/* boxes section */}
+        {/* Boxes Section */}
         <div className="flex flex-col md:flex-row items-start justify-center space-y-8 md:space-y-0 md:space-x-12 w-full max-w-6xl">
           {/* Left Content: About Me */}
           <div className="relative w-full md:w-1/2 group">
