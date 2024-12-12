@@ -1,12 +1,12 @@
-## Parsa Sedghi Paragraphs Regarding Process
-This project involved implementing two web pages using Next.js (the Home page and the About page). The main goal was to create responsive, visually appealing designs that follow the accessibility standards (Levels A and AA) and has a theme throughout the pages. Both pages reflect thoughtful design decisions based on initial mockups I created and incorporates modern features for an engaging user experience.
+## Parsa Sedghi Final Project Submission
+This is my submission for the final project, which includes the following pages: Home, About, Projects, and Contact. I have implemented responsive design for the `Projects` page to make it mobile-friendly.
+--
+## Mobile-Friendly Page
+I believe that all the pages have been optimized for mobile screens. I adjusted their layouts to change widths based on the size of the screen. A good one to check out would either be the Home page or the Projects page.
 
-Both of these pages had heavy inspirations from my original mock-up as I liked the design and wanted to elaborate off of the design. One of the main challenges during development was adhering to accessibility requirements. For instance, initial color combinations for the text boxes did not meet minimum contrast standards, so the background was updated to a lighter shade, and text colors were adjusted to a darker shade to improve visability (and now it looks much better). Another challenge was ensuring responsiveness across screen sizes. On smaller devices, components such as the profile picture and staggered text on the Home page overlapped so I had to spend some time adjusting their positioning on smaller screens. Hover animations and transitions were implemented using Tailwind CSS utility classes. Icon sizes were adjusted for better visibility, and spacing was made to avoid crowdedness.
+--
 
-I also made the Navbar componenet so that I can just reuse the same component throughout all of the pages. This was really helpful since instead of copying and pasting code, I could just import it.
-
-My next steps are going into more detail on my other pages and I want to go into more detail for the final product!
-## Getting Started
+## Set up (For my own reference later)
 
 First, run the development server:
 
