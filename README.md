@@ -20,7 +20,13 @@ I believe that all the pages have been optimized for mobile screens. I adjusted 
 
 # Future Improvements   
    - I would love to publish my website so after this semester ends I will look at hosting platforms that you guys recommended from class.
-   - I want to work on the smaller things like animations for a longer period of time and also go from being a static project into a dynamic 
+   - I want to work on the smaller things like animations for a longer period of time and also go from being a static project into a dynamic project where I fetch API data from somewhere.
+
+## References of Packages
+- **React Icons**
+- **Next.js Navigation**
+- **Tailwind CSS**
+
 ## Set up (For my own reference later)
 
 First, run the development server:
