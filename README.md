@@ -1,7 +1,6 @@
 ## Parsa Sedghi Final Project Submission
---
-
 This is my submission for the final project, which includes the following pages: Home, About, Projects, and Contact. I have implemented responsive design for all the pages to make it mobile-friendly.
+
 --
 ## Mobile-Friendly Page
 I believe that all the pages have been optimized for mobile screens. I adjusted their layouts to change widths based on the size of the screen. A good one to check out would either be the 'Home' page or the 'Projects' page.
