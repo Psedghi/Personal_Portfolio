@@ -1,4 +1,5 @@
 ## Parsa Sedghi Final Project Submission
+--
 
 This is my submission for the final project, which includes the following pages: Home, About, Projects, and Contact. I have implemented responsive design for all the pages to make it mobile-friendly.
 --
