@@ -147,6 +147,11 @@ export default function Projects() {
           </div>
         </div>
       </main>
+
+      {/* Footer Section */}
+      <footer className="bg-[#280004] text-center text-sm md:text-base py-4 mt-auto" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
+        <p>&copy; 2024 Parsa Sedghi. All rights reserved.</p>
+      </footer>
     </div >
   );
 }
