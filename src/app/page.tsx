@@ -5,12 +5,12 @@ import profilePicture from "public/profile-picture.jpg";
 
 export default function Home() {
   return (
-    <div className="bg-[#280004] text-[#F0FFCE] flex flex-col min-h-screen w-full font-sans">
+    <div className="bg-[#280004] text-[#F0FFCE] flex flex-col min-h-screen font-sans">
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex flex-col items-center justify-center flex-grow px-4 md:px-12">
+      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-12 pt-[4rem]"> {/* Adjusted padding */}
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="relative mb-8 md:mb-0 md:mr-12 group">
             {/* Orange box outline */}
@@ -63,9 +63,25 @@ export default function Home() {
             </button>
           </Link>
         </div>
+
+        {/* Spacer for scrolling */}
+        <div className="flex-grow"></div>
       </main>
-      {/* Footer Section */}
-      <footer className="bg-[#280004] text-center text-sm md:text-base py-4 mt-auto" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
+
+      <footer className="bg-[#280004] text-center text-sm md:text-base py-4" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
+        <div className="mb-2">
+          <a href="mailto:psedghi@umd.edu" className="hover:text-[#A53F2B] transition">
+            Email Me
+          </a>
+          {" | "}
+          <a href="https://linkedin.com/in/parsa-sedghi" target="_blank" className="hover:text-[#A53F2B] transition">
+            LinkedIn
+          </a>
+          {" | "}
+          <a href="https://github.com/psedghi" target="_blank" className="hover:text-[#A53F2B] transition">
+            GitHub
+          </a>
+        </div>
         <p>&copy; 2024 Parsa Sedghi. All rights reserved.</p>
       </footer>
     </div>

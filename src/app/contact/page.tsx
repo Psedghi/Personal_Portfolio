@@ -31,7 +31,7 @@ export default function Contact() {
           <div className="flex space-x-8 mt-6">
             {/* Email */}
             <a
-              href="mailto:parsasedghi@outlook.com"
+              href="mailto:psedghi@umd.edu"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#F0FFCE] text-4xl hover:text-[#A53F2B] transition"

@@ -57,7 +57,7 @@ export default function Projects() {
                 className="text-lg md:text-xl mb-6"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
               >
-                This is a website that I created for my family store, The Red Bean. Mainly just used React, HTML, CSS, and JavaScript.
+                This is a website that I created for my family's store, The Red Bean. I used React, HTML, CSS, and JavaScript to create the website.
               </p>
               <a
                 href="https://theredbeancafe.com/"
@@ -146,12 +146,27 @@ export default function Projects() {
             </div>
           </div>
         </div>
+        {/* Spacer for scrolling */}
+        <div className="flex-grow"></div>
       </main>
 
-      {/* Footer Section */}
-      <footer className="bg-[#280004] text-center text-sm md:text-base py-4 mt-auto" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
+      <footer className="bg-[#280004] text-center text-sm md:text-base py-4" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
+        <div className="mb-2">
+          <a href="mailto:psedghi@umd.edu" className="hover:text-[#A53F2B] transition">
+            Email Me
+          </a>
+          {" | "}
+          <a href="https://linkedin.com/in/parsa-sedghi" target="_blank" className="hover:text-[#A53F2B] transition">
+            LinkedIn
+          </a>
+          {" | "}
+          <a href="https://github.com/psedghi" target="_blank" className="hover:text-[#A53F2B] transition">
+            GitHub
+          </a>
+        </div>
         <p>&copy; 2024 Parsa Sedghi. All rights reserved.</p>
       </footer>
-    </div >
+    </div>
+
   );
 }

@@ -146,10 +146,24 @@ export default function About() {
           </div>
         </div>
 
+        {/* Spacer for scrolling */}
+        <div className="flex-grow"></div>
       </main>
 
-      {/* Footer Section */}
-      <footer className="bg-[#280004] text-center text-sm md:text-base py-4 mt-auto" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
+      <footer className="bg-[#280004] text-center text-sm md:text-base py-4" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
+        <div className="mb-2">
+          <a href="mailto:psedghi@umd.edu" className="hover:text-[#A53F2B] transition">
+            Email Me
+          </a>
+          {" | "}
+          <a href="https://linkedin.com/in/parsa-sedghi" target="_blank" className="hover:text-[#A53F2B] transition">
+            LinkedIn
+          </a>
+          {" | "}
+          <a href="https://github.com/psedghi" target="_blank" className="hover:text-[#A53F2B] transition">
+            GitHub
+          </a>
+        </div>
         <p>&copy; 2024 Parsa Sedghi. All rights reserved.</p>
       </footer>
     </div>
