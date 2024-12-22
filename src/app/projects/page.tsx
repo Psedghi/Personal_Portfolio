@@ -152,7 +152,7 @@ export default function Projects() {
 
       <footer className="bg-[#280004] text-center text-sm md:text-base py-4" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
         <div className="mb-2">
-          <a href="mailto:psedghi@umd.edu" className="hover:text-[#A53F2B] transition">
+          <a href="mailto:psedghistem2022@gmail.com" className="hover:text-[#A53F2B] transition">
             Email Me
           </a>
           {" | "}
