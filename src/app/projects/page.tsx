@@ -78,8 +78,8 @@ export default function Projects() {
             <div className="relative w-full md:w-3/5"> {/* Adjusted width to 2/5 */}
               <div className="bg-[#4C230A] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
                 <img
-                  src="/Wodify.png"
-                  alt="Wodify"
+                  src="/TRS Homepage.png"
+                  alt="TRS Homepage"
                   className="w-full h-auto"
                 />
               </div>
@@ -96,9 +96,10 @@ export default function Projects() {
                 className="text-lg md:text-xl mb-6"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
               >
-                In this project, I used Pandas to analyzed the impact of free trials and discounts on customer retention and lifetime value for Wodify, a fitness CRM software company. I took the lead in cleaning and organizing <b><u>six</u></b> complex datasets with over <b><u>2.5 million</u></b> records. I developed retention rate metrics, and performed regression analyses to identify trends and provide actionable insights. This work allowed me to implement a machine learning algorithm to provide data-driven recommendations for optimizing gym memberships and pricing strategies, showcasing my ability to translate raw data into meaningful business solutions.</p>
+                As an Enterprise Software Engineer Intern at the University of Maryland, I contributed to the development of the Tuition Remission System (TRS) application, which processes tuition for thousands of students and faculty annually. From brainstorming and design to deployment, I was actively involved in creating a robust web-based solution. Utilizing a tech stack that included Java Servlets, JavaScript, Vue.js, CSS, HTML, Apache Maven, and SQL, I developed and deployed the system in a Java web application environment with Spring Boot frameworks. Additionally, I assisted with the team’s web application and back-end testing efforts to ensure the system’s reliability and performance for university clients.
+              </p>
               <a
-                href="https://docs.google.com/document/d/1CtTKe4PcdZlgl66tx8UsjA8lxmwxDCnQWv2zSiTeVXo/edit?usp=sharing"
+                href="https://uhr.umd.edu/benefits-and-wellness/tuition-remission"
                 target="_blank"
                 className="px-6 py-3 border-2 border-[#F0FFCE] text-[#F0FFCE] rounded-md hover:bg-[#A53F2B] transition"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
