@@ -71,13 +71,13 @@ export default function Projects() {
           </div>
 
           {/* Project 2 */}
-          <div className="flex flex-col md:flex-row-reverse items-center space-y-6 md:space-y-0 md:space-x-8">
+          <div className="flex flex-col md:flex-row-reverse items-center space-y-6 md:space-y-0 md:space-x-4">
             {/* Project Image */}
-            <div className="relative w-2/3 md:w-2/5"> {/* Adjusted width to 2/5 */}
+            <div className="relative w-full md:w-3/5"> {/* Adjusted width to 2/5 */}
               <div className="bg-[#4C230A] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
                 <img
-                  src="/Hylight.png"
-                  alt="HyLight"
+                  src="/Wodify.png"
+                  alt="Wodify"
                   className="w-full h-auto"
                 />
               </div>
@@ -88,16 +88,15 @@ export default function Projects() {
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ fontFamily: "Helvetica, sans-serif" }}
               >
-                HyLight
+                Wodify Machine Learning Project
               </h2>
               <p
                 className="text-lg md:text-xl mb-6"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
               >
-                This project marked a significant milestone in my journey with the QUEST Honors Program at UMD, where I had the privilege to present a project very close to our hearts. We developed HyLight, a solar-powered lighting solution for fire hydrants that aims to revolutionize the way firefighters respond to emergencies. In extreme conditions like heavy snow or smog, firefighters often struggle to locate hydrants, a problem HyLight addresses sustainably and efficiently.
-              </p>
+                In this project, I used Pandas to analyzed the impact of free trials and discounts on customer retention and lifetime value for Wodify, a fitness CRM software company. I took the lead in cleaning and organizing <b><u>six</u></b> complex datasets with over <b><u>2.5 million</u></b> records. I developed retention rate metrics, and performed regression analyses to identify trends and provide actionable insights. This work allowed me to implement a machine learning algorithm to provide data-driven recommendations for optimizing gym memberships and pricing strategies, showcasing my ability to translate raw data into meaningful business solutions.</p>
               <a
-                href="https://www.linkedin.com/in/parsa-sedghi/details/projects/1210074597/multiple-media-viewer/?profileId=ACoAAC46NtQBI6rin7H3_lSWzJAocR95UapOyXY&treasuryMediaId=1704164607696"
+                href="https://docs.google.com/document/d/1CtTKe4PcdZlgl66tx8UsjA8lxmwxDCnQWv2zSiTeVXo/edit?usp=sharing"
                 target="_blank"
                 className="px-6 py-3 border-2 border-[#F0FFCE] text-[#F0FFCE] rounded-md hover:bg-[#A53F2B] transition"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
@@ -143,6 +142,45 @@ export default function Projects() {
               </a>
             </div>
           </div>
+
+          {/* Project 4*/}
+          <div className="flex flex-col md:flex-row-reverse items-center space-y-6 md:space-y-0 md:space-x-4">
+            {/* Project Image */}
+            <div className="relative w-2/3 md:w-2/5"> {/* Adjusted width to 2/5 */}
+              <div className="bg-[#4C230A] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <img
+                  src="/Hylight.png"
+                  alt="HyLight"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            {/* Project Description */}
+            <div className="w-full md:w-4/5 text-left"> {/* Adjusted width to 3/5 */}
+              <h2
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ fontFamily: "Helvetica, sans-serif" }}
+              >
+                HyLight
+              </h2>
+              <p
+                className="text-lg md:text-xl mb-6"
+                style={{ fontFamily: "DejaVuSans, sans-serif" }}
+              >
+                This project marked a significant milestone in my journey with the QUEST Honors Program at UMD, where I had the privilege to present a project very close to our hearts. We developed HyLight, a solar-powered lighting solution for fire hydrants that aims to revolutionize the way firefighters respond to emergencies. In extreme conditions like heavy snow or smog, firefighters often struggle to locate hydrants, a problem HyLight addresses sustainably and efficiently.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/parsa-sedghi/details/projects/1210074597/multiple-media-viewer/?profileId=ACoAAC46NtQBI6rin7H3_lSWzJAocR95UapOyXY&treasuryMediaId=1704164607696"
+                target="_blank"
+                className="px-6 py-3 border-2 border-[#F0FFCE] text-[#F0FFCE] rounded-md hover:bg-[#A53F2B] transition"
+                style={{ fontFamily: "DejaVuSans, sans-serif" }}
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+
+
         </div>
         {/* Spacer for scrolling */}
         <div className="spacer"></div> {/* Spacer */}
