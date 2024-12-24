@@ -12,7 +12,11 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-12 pt-[4rem]"> {/* Adjusted padding */}
         <div className="flex flex-col md:flex-row items-center justify-center">
-          <div className="relative mb-8 md:mb-0 md:mr-12 group">
+          {/* Profile Picture and Orange Outline */}
+          <div
+            className="relative mb-8 md:mb-0 md:mr-12 group opacity-0 animate-fadeIn"
+            style={{ animationDelay: "100ms" }} // Adds delay for staggered animation
+          >
             {/* Orange box outline */}
             <div
               className="absolute -top-4 -left-4 w-full h-full border-4 border-[#A53F2B] rounded-md group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform duration-500 ease-in-out"
@@ -31,23 +35,46 @@ export default function Home() {
 
           <div className="text-center md:text-left">
             <h1
-              className="font-bold leading-tight tracking-widest text-4xl md:text-6xl lg:text-[100px] transition-all duration-500 ease-in-out"
+              className="font-bold leading-tight tracking-widest text-4xl md:text-6xl lg:text-[100px]"
               style={{ fontFamily: "Helvetica, sans-serif" }}
             >
-              {/* Staggered text with animation */}
-              <span className="block opacity-0 animate-fadeInUp">BUILDING</span>
-              <span className="block ml-2 md:ml-6 lg:ml-8 opacity-0 animate-fadeInUp delay-[200ms]">
-                SOFTWARE
+              {/* Staggered text with load animation and hover bounce */}
+              <span
+                className="block opacity-0 animate-fadeInUp"
+                style={{ animationDelay: "0ms" }}
+              >
+                <span
+                  className="inline-block hover:animate-bounceHover transition-transform"
+                >
+                  BUILDING
+                </span>
               </span>
-              <span className="block ml-4 md:ml-12 lg:ml-16 opacity-0 animate-fadeInUp delay-[400ms]">
-                INNOVATIONS
+              <span
+                className="block ml-2 md:ml-6 lg:ml-8 opacity-0 animate-fadeInUp"
+                style={{ animationDelay: "200ms" }}
+              >
+                <span
+                  className="inline-block hover:animate-bounceHover transition-transform"
+                >
+                  SOFTWARE
+                </span>
+              </span>
+              <span
+                className="block ml-4 md:ml-12 lg:ml-16 opacity-0 animate-fadeInUp"
+                style={{ animationDelay: "400ms" }}
+              >
+                <span
+                  className="inline-block hover:animate-bounceHover transition-transform"
+                >
+                  INNOVATIONS
+                </span>
               </span>
             </h1>
           </div>
         </div>
 
         {/* Button Section */}
-        <div className="mt-8">
+        <div className="mt-8 opacity-0 animate-fadeIn" style={{ animationDelay: "500ms" }}>
           <div className="text-center mb-4">
             <hr className="border-t border-[#F0FFCE] w-1/2 md:w-2/3 mx-auto" />
           </div>
