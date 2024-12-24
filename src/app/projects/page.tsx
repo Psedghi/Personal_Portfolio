@@ -15,7 +15,7 @@ export default function Projects() {
       {/* Navbar */}
       <Navbar />
 
-      <main className="flex flex-col items-center justify-center flex-grow px-4 md:px-12">
+      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-12">
         {/* Title Section */}
         <h1
           className={`text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-10 ${isReady ? "opacity-100 animate-fadeInUp" : "opacity-0"
@@ -57,7 +57,7 @@ export default function Projects() {
                 className="text-lg md:text-xl mb-6"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
               >
-                This is a website that I created for my family's store, The Red Bean. I used React, HTML, CSS, and JavaScript to create the website.
+                This is a website that I created for my family's store, The Red Bean. I used React, HTML, CSS, and JavaScript to create the website. We are located in downtown Annapolis, Maryland. Come give us a visit!
               </p>
               <a
                 href="https://theredbeancafe.com/"
@@ -114,8 +114,8 @@ export default function Projects() {
             <div className="relative w-full md:w-1/2">
               <div className="bg-[#4C230A] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
                 <img
-                  src="/test.png"
-                  alt="Project 1"
+                  src="/ADR.png"
+                  alt="ADR Home Page Image"
                   className="w-full h-auto"
                 />
               </div>
@@ -126,17 +126,15 @@ export default function Projects() {
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ fontFamily: "Helvetica, sans-serif" }}
               >
-                Project Title 3
+                All District Reads Website
               </h2>
               <p
                 className="text-lg md:text-xl mb-6"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
               >
-                A brief description of the project, including its purpose,
-                technologies used, and any interesting challenges or solutions. [A placehold for now]
-              </p>
+                I contributed to the All District Reads project in Spring 2024 for Hack4Impact. Our goal was to increase literacy in K-5 students by developing tools to support parental involvement and track program impact. I played a key role in constructing the frontend of the Library system, which included creating multiple views and interactive forms, developing the Welcome page with user authentication, and syncing data between Firestore and the frontend. I overcame challenges such as connecting Firestore to the frontend and converting UI designs into functional CSS, showcasing his problem-solving and technical skills in React and Firebase.</p>
               <a
-                href="/projects/project3"
+                href="https://docs.google.com/presentation/d/1HqaUcWY4q1iyW0JUusaJA--zihkGyJ7hNT-S6OpBI0g/edit?usp=sharing"
                 target="_blank"
                 className="px-6 py-3 border-2 border-[#F0FFCE] text-[#F0FFCE] rounded-md hover:bg-[#A53F2B] transition"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
@@ -147,7 +145,7 @@ export default function Projects() {
           </div>
         </div>
         {/* Spacer for scrolling */}
-        <div className="flex-grow"></div>
+        <div className="spacer"></div> {/* Spacer */}
       </main>
 
       <footer className="bg-[#280004] text-center text-sm md:text-base py-4" style={{ fontFamily: "DejaVuSans, sans-serif" }}>

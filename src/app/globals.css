@@ -46,3 +46,12 @@ body {
     opacity: 1;
     transform: translateX(0);
 }
+
+footer {
+    margin-top: auto;
+    /* Ensure it's always pushed to the bottom */
+}
+
+.spacer {
+    margin-bottom: 30px;
+}
