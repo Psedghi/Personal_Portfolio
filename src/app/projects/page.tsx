@@ -15,7 +15,10 @@ export default function Projects() {
       {/* Navbar */}
       <Navbar />
 
-      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-12">
+      <main
+        className={`flex-grow flex flex-col items-center justify-center px-4 md:px-12 transition-opacity duration-1000 ${isReady ? "opacity-100 animate-fadeIn" : "opacity-0"
+          }`}
+      >
         {/* Title Section */}
         <h1
           className={`text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-10 ${isReady ? "opacity-100 animate-fadeInUp" : "opacity-0"
@@ -57,8 +60,7 @@ export default function Projects() {
                 className="text-lg md:text-xl mb-6"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
               >
-                This is a website that I created for my family's store, The Red Bean. I used React, HTML, CSS, and JavaScript to create the website. We are located in downtown Annapolis, Maryland. Come give us a visit!
-              </p>
+                I designed and developed a website for my family’s store, The Red Bean, located in the heart of downtown Annapolis, Maryland. Built using React, HTML, CSS, and JavaScript, the site has attracted over <b><u>40,000</u></b> visitors, showcasing our unique offerings and engaging with our community. If you’re in the area, we’d love for you to stop by and experience it in person!              </p>
               <a
                 href="https://theredbeancafe.com/"
                 target="_blank"

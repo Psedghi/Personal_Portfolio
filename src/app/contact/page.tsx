@@ -1,18 +1,30 @@
 "use client"; // Needed for client-side rendering
 
 import Navbar from "@/components/Navbar";
+import { useState, useEffect } from "react";
+
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    setIsReady(true); // Trigger the animation on mount
+  }, []);
+
+
   return (
     <div className="bg-[#280004] text-[#F0FFCE] flex flex-col min-h-screen w-full font-sans">
       {/* Navbar */}
       <Navbar />
 
-      <main className="flex flex-col items-center justify-center flex-grow px-4 md:px-12">
+      <main
+        className={`flex-grow flex flex-col items-center justify-center px-4 md:px-12 transition-opacity duration-1000 ${isReady ? "opacity-100 animate-fadeIn" : "opacity-0"
+          }`}
+      >
         {/* Title Section */}
         <h1
-          className={`text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-10 opacity-0 animate-fadeInUp`} // Added animation
+          className={`text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-10 opacity-0 animate-fadeInUp`}
           style={{ fontFamily: "Helvetica, sans-serif", letterSpacing: "-0.02em" }}
         >
           CONTACT ME
