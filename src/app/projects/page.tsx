@@ -36,6 +36,7 @@ export default function Projects() {
 
         {/* Projects Section */}
         <div className="flex flex-col space-y-12 w-full max-w-6xl">
+
           {/*Project 1 */}
           <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
             {/* Project Image */}
@@ -70,6 +71,13 @@ export default function Projects() {
                 View Project
               </a>
             </div>
+          </div>
+
+          {/* Decorative Icon */}
+          <div className="flex justify-center items-center my-8 space-x-2">
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
           </div>
 
           {/* Project UMD TRS */}
@@ -109,6 +117,12 @@ export default function Projects() {
             </div>
           </div>
 
+          {/* Decorative Icon */}
+          <div className="flex justify-center items-center my-8 space-x-2">
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+          </div>
 
           {/*Project CMSC320 SPY */}
           <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
@@ -146,6 +160,12 @@ export default function Projects() {
             </div>
           </div>
 
+          {/* Decorative Icon */}
+          <div className="flex justify-center items-center my-8 space-x-2">
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+          </div>
 
           {/* Project 2 */}
           <div className="flex flex-col md:flex-row-reverse items-center space-y-6 md:space-y-0 md:space-x-4">
@@ -183,6 +203,12 @@ export default function Projects() {
             </div>
           </div>
 
+          {/* Decorative Icon */}
+          <div className="flex justify-center items-center my-8 space-x-2">
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+          </div>
 
           {/*Project 3 */}
           <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
@@ -218,6 +244,13 @@ export default function Projects() {
                 View Project
               </a>
             </div>
+          </div>
+
+          {/* Decorative Icon */}
+          <div className="flex justify-center items-center my-8 space-x-2">
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
+            <span className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F0FFCE] rounded-full"></span>
           </div>
 
           {/* Project 4*/}
