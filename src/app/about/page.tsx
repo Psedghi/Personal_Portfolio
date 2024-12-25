@@ -41,91 +41,114 @@ export default function About() {
 
 
         {/* Timeline Section */}
-        <div className="w-full max-w-6xl mb-12">
-          <Timeline position="alternate">
-            <TimelineItem>
-              <TimelineOppositeContent
-                color="#F0FFCE"
-                style={{
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "0.9rem",
-                }}
-              >
-                Summer 2023 - Present
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="warning" />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent style={{ color: "#F0FFCE" }}>
-                <h3 className="text-xl font-bold">
-                  Enterprise Software Engineering Intern
-                </h3>
-                <p>UMD | College Park, MD</p>
-              </TimelineContent>
-            </TimelineItem>
+        <div className="relative max-w-6xl mx-auto mt-4">
+          {/* Timeline Line */}
+          <div
+            className="absolute top-0 bottom-0 w-1 bg-[#A53F2B]"
+            style={{ left: "3.8rem" }}
+          ></div>
 
-            <TimelineItem>
-              <TimelineOppositeContent
-                color="#F0FFCE"
-                style={{
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "0.9rem",
-                }}
+          {/* Timeline Items */}
+          <div className="space-y-20">
+            {/* BlackRock */}
+            <div className="relative flex items-start">
+              {/* Dot on the Line */}
+              <div
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
               >
-                Summer 2024
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="warning" />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent style={{ color: "#F0FFCE" }}>
+                <img
+                  src="/blackrock.jpg"
+                  alt="BlackRock"
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="ml-28">
                 <h3 className="text-xl font-bold">Software Engineering Intern</h3>
-                <p>BlackRock | Wilmington, DE</p>
-              </TimelineContent>
-            </TimelineItem>
+                <p className="text-sm">BlackRock | Wilmington, DE | Summer 2024</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Worked on cutting-edge platform engineering technologies to improve
+                  internal systems and streamline data pipelines.
+                </p>
+              </div>
+            </div>
 
-            <TimelineItem>
-              <TimelineOppositeContent
-                color="#F0FFCE"
-                style={{
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "0.9rem",
-                }}
+            {/* UMD */}
+            <div className="relative flex items-start">
+              {/* Dot on the Line */}
+              <div
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
               >
-                Spring 2024
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="warning" />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent style={{ color: "#F0FFCE" }}>
+                <img
+                  src="/umd.webp"
+                  alt="UMD"
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="ml-28">
+                <h3 className="text-xl font-bold">Enterprise Software Engineering Intern</h3>
+                <p className="text-sm">UMD | College Park, MD | Summer 2023 - Present</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Developed secure applications and contributed to the scalability of
+                  enterprise-level systems for the university.
+                </p>
+              </div>
+            </div>
+
+            {/* Wodify */}
+            <div className="relative flex items-start">
+              {/* Dot on the Line */}
+              <div
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
+              >
+                <img
+                  src="/quest.png"
+                  alt="Wodify/QUEST Honors"
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="ml-28">
                 <h3 className="text-xl font-bold">Data Science Intern</h3>
-                <p>Wodify | Remote</p>
-              </TimelineContent>
-            </TimelineItem>
+                <p className="text-sm">QUEST Honors/Wodify | Remote | Spring 2024</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Analyzed customer behavior data and implemented predictive models to
+                  enhance user engagement and retention.
+                </p>
+              </div>
+            </div>
 
-            <TimelineItem>
-              <TimelineOppositeContent
-                color="#F0FFCE"
-                style={{
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "0.9rem",
-                }}
+            {/* Consortium Networks */}
+            <div className="relative flex items-start">
+              {/* Dot on the Line */}
+              <div
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
               >
-                Summer 2023
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="warning" />
-              </TimelineSeparator>
-              <TimelineContent style={{ color: "#F0FFCE" }}>
+                <img
+                  src="/consortium.jpg"
+                  alt="Consortium Networks"
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="ml-28">
                 <h3 className="text-xl font-bold">Cyber Analyst Intern</h3>
-                <p>Consortium Networks | Remote</p>
-              </TimelineContent>
-            </TimelineItem>
-          </Timeline>
+                <p className="text-sm">Consortium Networks | Remote | Summer 2023</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Investigated and mitigated cyber threats, enhancing the security of
+                  enterprise networks and preventing data breaches.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div className="spacer"></div>
 
         {/* Boxes Section */}
         <div className="flex flex-col md:flex-row items-start justify-center space-y-8 md:space-y-0 md:space-x-12 w-full max-w-6xl">
