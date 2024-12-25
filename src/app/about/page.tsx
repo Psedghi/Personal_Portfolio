@@ -2,6 +2,15 @@
 
 import Navbar from "@/components/Navbar";
 import { useState, useEffect } from "react";
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineDot,
+  TimelineConnector,
+  TimelineContent,
+  TimelineOppositeContent,
+} from "@mui/lab";
 
 export default function About() {
   const [isReady, setIsReady] = useState(false);
@@ -29,6 +38,94 @@ export default function About() {
           ABOUT PARSA
         </h1>
         <hr className="border-t-2 border-[#F0FFCE] w-1/3 mb-12" />
+
+
+        {/* Timeline Section */}
+        <div className="w-full max-w-6xl mb-12">
+          <Timeline position="alternate">
+            <TimelineItem>
+              <TimelineOppositeContent
+                color="#F0FFCE"
+                style={{
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "0.9rem",
+                }}
+              >
+                Summer 2023 - Present
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot color="warning" />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent style={{ color: "#F0FFCE" }}>
+                <h3 className="text-xl font-bold">
+                  Enterprise Software Engineering Intern
+                </h3>
+                <p>UMD | College Park, MD</p>
+              </TimelineContent>
+            </TimelineItem>
+
+            <TimelineItem>
+              <TimelineOppositeContent
+                color="#F0FFCE"
+                style={{
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "0.9rem",
+                }}
+              >
+                Summer 2024
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot color="warning" />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent style={{ color: "#F0FFCE" }}>
+                <h3 className="text-xl font-bold">Software Engineering Intern</h3>
+                <p>BlackRock | Wilmington, DE</p>
+              </TimelineContent>
+            </TimelineItem>
+
+            <TimelineItem>
+              <TimelineOppositeContent
+                color="#F0FFCE"
+                style={{
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "0.9rem",
+                }}
+              >
+                Spring 2024
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot color="warning" />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent style={{ color: "#F0FFCE" }}>
+                <h3 className="text-xl font-bold">Data Science Intern</h3>
+                <p>Wodify | Remote</p>
+              </TimelineContent>
+            </TimelineItem>
+
+            <TimelineItem>
+              <TimelineOppositeContent
+                color="#F0FFCE"
+                style={{
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "0.9rem",
+                }}
+              >
+                Summer 2023
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot color="warning" />
+              </TimelineSeparator>
+              <TimelineContent style={{ color: "#F0FFCE" }}>
+                <h3 className="text-xl font-bold">Cyber Analyst Intern</h3>
+                <p>Consortium Networks | Remote</p>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        </div>
+
 
         {/* Boxes Section */}
         <div className="flex flex-col md:flex-row items-start justify-center space-y-8 md:space-y-0 md:space-x-12 w-full max-w-6xl">
