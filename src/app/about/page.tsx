@@ -39,9 +39,16 @@ export default function About() {
         </h1>
         <hr className="border-t-2 border-[#F0FFCE] w-1/3 mb-12" />
 
+        <h2
+          className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 center-text"
+          style={{ fontFamily: "Helvetica, sans-serif", color: "#F0FFCE" }}
+        >
+          Professional Highlights
+        </h2>
 
         {/* Timeline Section */}
         <div className="relative max-w-6xl mx-auto mt-4">
+
           {/* Timeline Line */}
           <div
             className="absolute top-0 bottom-0 w-1 bg-[#A53F2B]"
@@ -50,6 +57,34 @@ export default function About() {
 
           {/* Timeline Items */}
           <div className="space-y-20">
+
+
+            {/* UMD */}
+            <div className="relative flex items-start">
+              {/* Dot on the Line */}
+              <a
+                href="https://it.umd.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
+              >
+                <img
+                  src="/umd.webp"
+                  alt="UMD"
+                  className="logo w-16 h-16 rounded-full object-cover"
+                />
+              </a>
+              {/* Content */}
+              <div className="ml-28">
+                <h3 className="text-xl font-bold">Enterprise Software Engineering Intern</h3>
+                <p className="text-sm">UMD | College Park, MD | Summer 2022 - Present</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Developed secure applications and contributed to the scalability of
+                  enterprise-level systems for the university.
+                </p>
+              </div>
+            </div>
 
             {/* BlackRock */}
             <div className="relative flex items-start">
@@ -72,35 +107,8 @@ export default function About() {
                 <h3 className="text-xl font-bold">Software Engineering Intern</h3>
                 <p className="text-sm">BlackRock | Wilmington, DE | Summer 2024</p>
                 <p className="text-sm text-[#F0FFCE]/80 mt-2">
-                  Worked on cutting-edge platform engineering technologies to improve
-                  internal systems and streamline data pipelines.
-                </p>
-              </div>
-            </div>
-
-            {/* UMD */}
-            <div className="relative flex items-start">
-              {/* Dot on the Line */}
-              <a
-                href="https://it.umd.edu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
-                style={{ transform: "translateY(-50%)" }}
-              >
-                <img
-                  src="/umd.webp"
-                  alt="UMD"
-                  className="logo w-16 h-16 rounded-full object-cover"
-                />
-              </a>
-              {/* Content */}
-              <div className="ml-28">
-                <h3 className="text-xl font-bold">Enterprise Software Engineering Intern</h3>
-                <p className="text-sm">UMD | College Park, MD | Summer 2023 - Present</p>
-                <p className="text-sm text-[#F0FFCE]/80 mt-2">
-                  Developed secure applications and contributed to the scalability of
-                  enterprise-level systems for the university.
+                  Worked on operational and financial engineering technologies to improve
+                  internal systems and streamline workflow processes.
                 </p>
               </div>
             </div>
@@ -132,6 +140,31 @@ export default function About() {
               </div>
             </div>
 
+            {/* Jane Street */}
+            <div className="relative flex items-start">
+              {/* Dot on the Line */}
+              <a
+                href="https://www.janestreet.com/join-jane-street/programs-and-events/in-focus/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
+              >
+                <img
+                  src="/janeStreet.jpeg"
+                  alt="Jane Street Logo"
+                  className="logo w-16 h-16 rounded-full object-cover"
+                />
+              </a>
+              {/* Content */}
+              <div className="ml-28">
+                <h3 className="text-xl font-bold">IN FOCUS Software Engineering Extern</h3>
+                <p className="text-sm">Jane Street | New York, NY | Winter 2024</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  I gained proficiency in functional programming with OCaml, developed a Python-based stock trading bot, and applied quantitative analysis and probability theories in simulated trading exercises to deepen my understanding of market dynamics and trading strategies.                </p>
+              </div>
+            </div>
+
             {/* Consortium Networks */}
             <div className="relative flex items-start">
               {/* Dot on the Line */}
@@ -145,7 +178,7 @@ export default function About() {
                 <img
                   src="/consortium.jpg"
                   alt="Consortium Networks"
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="logo w-16 h-16 rounded-full object-cover"
                 />
               </a>
               {/* Content */}
@@ -153,9 +186,33 @@ export default function About() {
                 <h3 className="text-xl font-bold">Cyber Analyst Intern</h3>
                 <p className="text-sm">Consortium Networks | Remote | Summer 2023</p>
                 <p className="text-sm text-[#F0FFCE]/80 mt-2">
-                  Investigated and mitigated cyber threats, enhancing the security of
-                  enterprise networks and preventing data breaches.
+                  Conducted product and penetration testing, developed incident response plans, and implemented advanced security measures to enhance the network security posture of Fortune 500 clients and other organizations.
                 </p>
+              </div>
+            </div>
+
+            {/* Best Buy */}
+            <div className="relative flex items-start">
+              {/* Dot on the Line */}
+              <a
+                href="https://jobs.bestbuy.com/bby?id=item_detail&content=about_us"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
+              >
+                <img
+                  src="/Best Buy.jpg"
+                  alt="Best Buy"
+                  className="logo w-16 h-16 rounded-full object-cover"
+                />
+              </a>
+              {/* Content */}
+              <div className="ml-28">
+                <h3 className="text-xl font-bold">Sales Associate</h3>
+                <p className="text-sm">Best Buy | Annapolis, MD | Fall 2021 - Winter 2023</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Provided personalized technology solutions, delivered exceptional customer service, and exceeded sales goals by effectively communicating product benefits and tailoring recommendations to customer needs.                </p>
               </div>
             </div>
           </div>
