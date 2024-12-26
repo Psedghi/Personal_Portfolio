@@ -50,19 +50,23 @@ export default function About() {
 
           {/* Timeline Items */}
           <div className="space-y-20">
+
             {/* BlackRock */}
             <div className="relative flex items-start">
               {/* Dot on the Line */}
-              <div
+              <a
+                href="https://www.blackrock.com/us/individual"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
                 style={{ transform: "translateY(-50%)" }}
               >
                 <img
                   src="/blackrock.jpg"
                   alt="BlackRock"
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="logo w-16 h-16 rounded-full object-cover"
                 />
-              </div>
+              </a>
               {/* Content */}
               <div className="ml-28">
                 <h3 className="text-xl font-bold">Software Engineering Intern</h3>
@@ -77,16 +81,19 @@ export default function About() {
             {/* UMD */}
             <div className="relative flex items-start">
               {/* Dot on the Line */}
-              <div
+              <a
+                href="https://it.umd.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
                 style={{ transform: "translateY(-50%)" }}
               >
                 <img
                   src="/umd.webp"
                   alt="UMD"
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="logo w-16 h-16 rounded-full object-cover"
                 />
-              </div>
+              </a>
               {/* Content */}
               <div className="ml-28">
                 <h3 className="text-xl font-bold">Enterprise Software Engineering Intern</h3>
@@ -101,16 +108,19 @@ export default function About() {
             {/* Wodify */}
             <div className="relative flex items-start">
               {/* Dot on the Line */}
-              <div
+              <a
+                href="https://www.rhsmith.umd.edu/quest"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
                 style={{ transform: "translateY(-50%)" }}
               >
                 <img
                   src="/quest.png"
                   alt="Wodify/QUEST Honors"
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="logo w-16 h-16 rounded-full object-cover"
                 />
-              </div>
+              </a>
               {/* Content */}
               <div className="ml-28">
                 <h3 className="text-xl font-bold">Data Science Intern</h3>
@@ -125,7 +135,10 @@ export default function About() {
             {/* Consortium Networks */}
             <div className="relative flex items-start">
               {/* Dot on the Line */}
-              <div
+              <a
+                href="https://consortium.net/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
                 style={{ transform: "translateY(-50%)" }}
               >
@@ -134,7 +147,7 @@ export default function About() {
                   alt="Consortium Networks"
                   className="w-16 h-16 rounded-full object-cover"
                 />
-              </div>
+              </a>
               {/* Content */}
               <div className="ml-28">
                 <h3 className="text-xl font-bold">Cyber Analyst Intern</h3>
