@@ -78,14 +78,14 @@ export default function Home() {
           <div className="text-center mb-4">
             <hr className="border-t border-[#F0FFCE] w-1/2 md:w-2/3 mx-auto" />
           </div>
-          <Link href="/projects">
+          <Link href="/about">
             <button
               className="px-6 md:px-8 py-2 md:py-3 border-2 border-[#F0FFCE] rounded-md text-[#F0FFCE] text-base md:text-lg lg:text-[40px] cursor-pointer relative overflow-hidden group"
               style={{ fontFamily: "DejaVuSans, sans-serif" }}
             >
               <span className="absolute inset-0 bg-gradient-to-r from-[#A53F2B] to-[#F0FFCE] transition-transform duration-500 transform scale-x-0 group-hover:scale-x-100 origin-left z-0"></span>
               <span className="relative z-10 group-hover:text-[#280004] transition-colors duration-500">
-                VIEW MY WORK
+                LEARN ABOUT ME
               </span>
             </button>
           </Link>

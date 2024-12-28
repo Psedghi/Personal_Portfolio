@@ -16,7 +16,10 @@ export default function About() {
       {/* Navbar */}
       <Navbar />
 
-      <main className="flex flex-col items-center justify-center flex-grow px-4 md:px-12">
+      <main
+        className={`flex-grow flex flex-col items-center justify-center px-4 md:px-12 transition-opacity duration-1000 ${isReady ? "opacity-100 animate-fadeIn" : "opacity-0"
+          }`}
+      >
         {/* Title Section */}
         <h1
           className={`text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-10 ${isReady ? "opacity-100 animate-fadeInUp" : "opacity-0"
@@ -49,26 +52,53 @@ export default function About() {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ fontFamily: "DejaVuSans, sans-serif", color: "#4C230A" }}
               >
-                My name is Parsa Sedghi, and I am a full-stack developer passionate
-                about creating innovative solutions using JavaScript, React, and
-                modern web technologies. With a unique combination of creativity,
-                logic, and technical expertise, I thrive on tackling challenging
-                projects and building intuitive user experiences.
+                My name is Parsa Sedghi, and I am a junior at the <a
+                  href="https://www.umd.edu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#A53F2B", textDecoration: "underline" }}>University of Maryland</a> pursuing a dual degree in <i>Computer Science</i> and <i>Operations
+                    Management/Business Analytics</i> as well as a minor in <i>Cybersecurity</i>. I am
+                also in the <a
+                  href="https://www.rhsmith.umd.edu/quest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#A53F2B", textDecoration: "underline" }}>QUEST Honors Program</a>, where I have the unique opportunity to
+                work on real-world, multidisciplinary projects each semester. The program
+                emphasizes experiential learning, teamwork, and creating innovative
+                solutions to complex challenges.
                 <br />
                 <br />
-                When I’m not coding, I enjoy reading, staying active, and playing
-                soccer. Feel free to reach out if you’re interested in collaborating
-                on projects, sharing ideas, or just having a chat!
+                With a unique combination of creativity, logic, and technical expertise, I
+                thrive on working with wonderful people to tackle challenging projects and
+                build intuitive products. Whether it's through coding, designing, or analyzing data,
+                I am driven by a passion for continuous learning and growth, striving every day to make a meaningful
+                impact at the intersection of technology and business.
+                <br />
+                <br />
+                <b>My Interests: </b> Cybersecurity | Machine Learning | FinTech | Cloud Computing
+                <br />
+                <br />
+                <b>Get in touch: </b>
+                <a
+                  href="mailto:psedghistem2022@gmail.com"
+                  style={{ color: "#A53F2B", textDecoration: "underline" }}
+                >
+                  Email Me
+                </a>
+                {" | "}
+                <a
+                  href="https://linkedin.com/in/parsa-sedghi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#A53F2B", textDecoration: "underline" }}
+                >
+                  LinkedIn
+                </a>
               </p>
-              <button
-                className="mt-6 px-6 py-3 border-2 border-[#4C230A] text-[#4C230A] rounded-md hover:bg-[#A53F2B] hover:text-[#F0FFCE] transition cursor-pointer"
-                style={{ fontFamily: "DejaVuSans, sans-serif" }}
-              >
-                Email Me!
-              </button>
             </div>
           </div>
         </div>
+
 
         <div className="spacer"></div>
         <div className="spacer"></div>
