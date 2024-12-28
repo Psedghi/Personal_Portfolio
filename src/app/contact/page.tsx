@@ -46,7 +46,7 @@ export default function Contact() {
               href="mailto:psedghistem2022@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#F0FFCE] text-4xl hover:text-[#A53F2B] transition"
+              className="text-[#F0FFCE] text-4xl md:text-5xl lg:text-7xl hover:text-[#A53F2B] transition"
               aria-label="Email"
             >
               <FaEnvelope />
@@ -56,7 +56,7 @@ export default function Contact() {
               href="https://linkedin.com/in/parsa-sedghi"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#F0FFCE] text-4xl hover:text-[#A53F2B] transition"
+              className="text-[#F0FFCE] text-4xl md:text-5xl lg:text-7xl hover:text-[#A53F2B] transition"
               aria-label="LinkedIn"
             >
               <FaLinkedin />
@@ -66,20 +66,10 @@ export default function Contact() {
               href="https://github.com/psedghi"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#F0FFCE] text-4xl hover:text-[#A53F2B] transition"
+              className="text-[#F0FFCE] text-4xl md:text-5xl lg:text-7xl hover:text-[#A53F2B] transition"
               aria-label="GitHub"
             >
               <FaGithub />
-            </a>
-            {/* Instagram */}
-            <a
-              href="https://instagram.com/parsa_sedghi_"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#F0FFCE] text-4xl hover:text-[#A53F2B] transition"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
             </a>
           </div>
         </div>
