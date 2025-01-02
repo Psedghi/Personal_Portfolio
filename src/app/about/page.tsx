@@ -72,7 +72,8 @@ export default function About() {
                 thrive on working with wonderful people to tackle challenging projects and
                 build intuitive products. Whether it's through coding, designing, or analyzing data,
                 I am driven by a passion for continuous learning and growth, striving every day to make a meaningful
-                impact at the intersection of technology and business.
+                impact at the intersection of technology and business. Outside of work, I really enjoy watching soccer,
+                weightlifting, and running.
                 <br />
                 <br />
                 <b>My Interests: </b> Cybersecurity | Machine Learning | FinTech | Cloud Computing
@@ -287,9 +288,8 @@ export default function About() {
         <div className="spacer"></div>
         <div className="spacer"></div>
 
-        {/* Boxes Section */}
+        {/* Education & Certifications Section */}
         <div className="flex flex-col md:flex-row items-start justify-center space-y-8 md:space-y-0 md:space-x-12 w-full max-w-6xl">
-          {/* Right Content: Skills */}
           <div className="relative w-full md:w-5/6 group">
             <div
               className="absolute -top-4 -left-4 w-full h-full border-4 border-[#A53F2B] rounded-lg group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform duration-300"
@@ -300,68 +300,69 @@ export default function About() {
                 className="text-2xl md:text-3xl font-bold mb-4"
                 style={{ fontFamily: "Helvetica, sans-serif", color: "#4C230A" }}
               >
-                [Changing This Section to Something Else]
+                My Education & Certifications
               </h2>
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-bold mb-2" style={{ color: "#4C230A" }}>
-                    Programming Languages
-                  </h3>
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src="/icons/js-logo.png"
-                      alt="JavaScript"
-                      className="w-14 h-14 hover:scale-110 transition"
-                    />
-                    <span style={{ color: "#4C230A" }}>JavaScript</span>
-                  </div>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <img
-                      src="/icons/html.png"
-                      alt="HTML5"
-                      className="w-14 h-14 hover:scale-110 transition"
-                    />
-                    <span style={{ color: "#4C230A" }}>HTML5</span>
-                  </div>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <img
-                      src="/icons/css-logo.png"
-                      alt="CSS3"
-                      className="w-14 h-14 hover:scale-110 transition"
-                    />
-                    <span style={{ color: "#4C230A" }}>CSS3</span>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-bold mb-2" style={{ color: "#4C230A" }}>
-                    Libraries & Frameworks
-                  </h3>
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src="/icons/react.png"
-                      alt="React"
-                      className="w-14 h-14 hover:scale-110 transition"
-                    />
-                    <span style={{ color: "#4C230A" }}>React</span>
-                  </div>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <img
-                      src="/icons/vue-js.png"
-                      alt="Vue.js"
-                      className="w-14 h-14 hover:scale-110 transition"
-                    />
-                    <span style={{ color: "#4C230A" }}>Vue.js</span>
-                  </div>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <img
-                      src="/icons/jsiconGreen.svg"
-                      alt="Node.js"
-                      className="w-14 h-14 hover:scale-110 transition"
-                    />
-                    <span style={{ color: "#4C230A" }}>Node.js</span>
-                  </div>
-                </div>
-              </div>
+              <ul className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "DejaVuSans, sans-serif", color: "#4C230A" }}>
+                <li className="mb-4">
+                  <b>
+                    University of Maryland
+                  </b>
+                  <ul className="list-disc list-inside pl-4">
+                    <li>
+                      <i>Dual Degree: </i><a href="https://www.rhsmith.umd.edu/programs/undergraduate/academics/academic-majors" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        Operations Management & Business Analytics
+                      </a>{" "}
+                      +{" "}
+                      <a href="https://www.cs.umd.edu/" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        Computer Science
+                      </a>
+                    </li>
+
+                    <li>
+                      <i>Minor:</i> <a href="https://aces.umd.edu/minor" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        Cybersecurity
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.rhsmith.umd.edu/quest" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        QUEST Honors Program
+                      </a>
+                    </li>
+                    <li><b>Activities:</b> Hack4Impact, Omicron Delta Kappa, Computer Science Advisory Board, Startup Shell</li>
+                  </ul>
+                </li>
+                <li className="mb-4">
+                  <b>Certifications</b>
+                  <ul className="list-disc list-inside pl-4">
+                    <li>
+                      <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        AWS Cloud Practitioner
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.codepath.org/courses/tech-interview-prep" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        CodePath Advanced Technical Program Certificate
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.credly.com/org/project-management-institute/badge/fundamentals-of-predictive-project-management" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        Fundamentals of Predictive Project Management
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="mb-4">
+                  <b>Skills</b>
+                  <ul className="list-disc list-inside pl-4">
+                    <li>
+                      <b>Programming Languages & Frameworks:</b> Python, Java, C, SQL, React, Vue.js, OCaml, JavaScript/CSS/HTML, R, TypeScript, Bash, Streamlit
+                    </li>
+                    <li>
+                      <b>Tools:</b> AWS, Docker, Node.js, Snowflake, VMware, Tableau, Excel
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
