@@ -309,17 +309,17 @@ export default function About() {
                   </b>
                   <ul className="list-disc list-inside pl-4">
                     <li>
-                      <i>Dual Degree: </i><a href="https://www.rhsmith.umd.edu/programs/undergraduate/academics/academic-majors" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
-                        Operations Management & Business Analytics
+                      <b>Dual Degree: </b><a href="https://www.rhsmith.umd.edu/programs/undergraduate/academics/academic-majors" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                        B.S. Operations Management & Business Analytics
                       </a>{" "}
                       +{" "}
                       <a href="https://www.cs.umd.edu/" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
-                        Computer Science
+                        B.S. Computer Science
                       </a>
                     </li>
 
                     <li>
-                      <i>Minor:</i> <a href="https://aces.umd.edu/minor" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
+                      <b>Minor:</b> <a href="https://aces.umd.edu/minor" target="_blank" rel="noopener noreferrer" style={{ color: "#A53F2B", textDecoration: "underline" }}>
                         Cybersecurity
                       </a>
                     </li>
@@ -358,7 +358,7 @@ export default function About() {
                       <b>Programming Languages & Frameworks:</b> Python, Java, C, SQL, React, Vue.js, OCaml, JavaScript/CSS/HTML, R, TypeScript, Bash, Streamlit
                     </li>
                     <li>
-                      <b>Tools:</b> AWS, Docker, Node.js, Snowflake, VMware, Tableau, Excel
+                      <b>Tools:</b> AWS, Docker, Node.js, Snowflake, Nessus VMware, Tableau, Excel
                     </li>
                   </ul>
                 </li>
