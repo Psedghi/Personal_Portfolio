@@ -69,7 +69,7 @@ export default function About() {
                 <br />
                 With a unique combination of creativity, logic, and technical expertise, I
                 thrive on working with wonderful people to tackle challenging projects and
-                build intuitive products. Whether it's through coding, designing, or analyzing data,
+                build intuitive products. Whether it&apos;s through coding, designing, or analyzing data,
                 I am driven by a passion for continuous learning and growth, striving every day to make a meaningful
                 impact at the intersection of technology and business. Outside of work, I really enjoy watching soccer,
                 weightlifting, and running.

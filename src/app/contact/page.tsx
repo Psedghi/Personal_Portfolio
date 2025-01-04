@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import { useState, useEffect } from "react";
 
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   const [isReady, setIsReady] = useState(false);
