@@ -26,16 +26,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-
-## Note for Myself 
-Here are some sources of inspiration:
+## Fantastic Sources of Inspiration
+Here are some sources of inspiration I used because these were great:
 https://www.reddit.com/r/Frontend/comments/o1sbve/how_do_i_present_projects_on_my_portfolio_website/
+
+https://github.com/emmabostian/developer-portfolios

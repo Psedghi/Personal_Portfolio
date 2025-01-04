@@ -3,7 +3,6 @@
 import Navbar from "@/components/Navbar";
 import { useState, useEffect } from "react";
 
-
 export default function About() {
   const [isReady, setIsReady] = useState(false);
 
@@ -358,7 +357,7 @@ export default function About() {
                       <b>Programming Languages & Frameworks:</b> Python, Java, C, SQL, React, Vue.js, OCaml, JavaScript/CSS/HTML, R, TypeScript, Bash, Streamlit
                     </li>
                     <li>
-                      <b>Tools:</b> AWS, Docker, Node.js, Snowflake, Nessus VMware, Tableau, Excel
+                      <b>Tools:</b> AWS, Docker, Node.js, Snowflake, Nessus, VMware, Tableau, Excel
                     </li>
                   </ul>
                 </li>
