@@ -2,18 +2,42 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
-    const pathname = usePathname();
+    const pathname = usePathname(); // Get the current path
     const [isOpen, setIsOpen] = useState(false);
+    const navbarRef = useRef(null);
 
     const isActive = (path) => pathname === path;
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
+    // Close the menu when the pathname changes
+    useEffect(() => {
+        setIsOpen(false);
+    }, [pathname]);
+
+    // Close the menu if clicking outside the navbar
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     return (
-        <header className="bg-[#280004] sticky top-0 z-50 w-full py-4 px-6 lg:px-12 text-[#F0FFCE] text-xl">
+        <header
+            ref={navbarRef}
+            className="bg-[#280004] sticky top-0 z-50 w-full py-4 px-6 lg:px-12 text-[#F0FFCE] text-xl"
+        >
             <div className="flex justify-between items-center">
                 {/* Logo */}
                 <Link
