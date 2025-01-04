@@ -28,6 +28,10 @@ export default function Home() {
                 src={profilePicture}
                 alt="Profile Picture"
                 className="rounded-md w-48 md:w-64 lg:w-72 h-auto group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                width={288} // Explicit size
+                height={288} // Explicit size
+                layout="intrinsic" // Maintain aspect ratio
+                placeholder="blur"
                 priority
               />
             </div>
