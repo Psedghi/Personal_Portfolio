@@ -3,7 +3,7 @@ This is my personal portfolio page! Welcome and I hope you liked it. I originall
 
 
 ## Mobile-Friendly Page
-I believe that all the pages have been optimized for mobile screens. I adjusted their layouts to change widths based on the size of the screen. A good one to check out would either be the 'Home' page or the 'Projects' page.
+I have made it where all the pages have been optimized for mobile screens. I adjusted their layouts to change widths based on the size of the screen. A good one to check out would either be the 'Home' page or the 'Projects' page.
 
 ## References of Packages
 - **React Icons**
