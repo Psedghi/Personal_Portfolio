@@ -259,7 +259,7 @@ export default function Projects() {
             <div className="relative w-2/3 md:w-2/5"> {/* Adjusted width to 2/5 */}
               <div className="bg-[#4C230A] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
                 <img
-                  src="/.hylight.png"
+                  src="./hylight.png"
                   alt="HyLight"
                   className="w-full h-auto"
                 />
