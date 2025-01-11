@@ -173,7 +173,7 @@ export default function Projects() {
             <div className="relative w-full md:w-3/5"> {/* Adjusted width to 2/5 */}
               <div className="bg-[#4C230A] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
                 <img
-                  src="/wodify.png"
+                  src="./wodify.png"
                   alt="Wodify"
                   className="w-full h-auto"
                 />
