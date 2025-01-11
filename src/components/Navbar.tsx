@@ -27,6 +27,11 @@ const Navbar = () => {
             } else {
                 setShowScrollTop(false);
             }
+
+            // Close the menu if the scroll position exceeds a threshold
+            if (window.scrollY > 500) {
+                setIsOpen(false);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
