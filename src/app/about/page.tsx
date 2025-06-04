@@ -124,6 +124,53 @@ export default function About() {
           {/* Timeline Items */}
           <div className="space-y-20">
 
+            {/* Microsoft */}
+            <div className="relative flex items-start">
+              <a
+                href="https://datacenters.microsoft.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
+              >
+                <img
+                  src="/microsoft-logo.png"
+                  alt="Microsoft"
+                  className="logo w-16 h-16 rounded-full object-cover"
+                />
+              </a>
+              <div className="ml-28">
+                <h3 className="text-xl font-bold">Incoming Summer Intern</h3>
+                <p className="text-sm">Microsoft | Redmond, WA | Summer 2025</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Set to join the Cloud Operations + Innovations team to develop scalable internal tools and improve infrastructure reliability. Focused on delivering cross-functional engineering solutions for global enterprise customers.
+                </p>
+              </div>
+            </div>
+
+            {/* Meta */}
+            <div className="relative flex items-start">
+              <a
+                href="https://www.meta.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-6 top-0 w-20 h-20 rounded-full border-2 border-[#F0FFCE] bg-[#280004] flex items-center justify-center z-10"
+                style={{ transform: "translateY(-50%)" }}
+              >
+                <img
+                  src="/meta_icon.jpg"
+                  alt="Meta"
+                  className="logo w-16 h-16 rounded-full object-cover"
+                />
+              </a>
+              <div className="ml-28">
+                <h3 className="text-xl font-bold">Software Engineering Intern</h3>
+                <p className="text-sm">Meta | College Park, MD | Spring 2025</p>
+                <p className="text-sm text-[#F0FFCE]/80 mt-2">
+                  Built an AI-powered onboarding agent for XR devices for Meta Reality Labs using TypeScript, React Native, and LLM APIs, improving user understanding of privacy policies. Developed RAG pipelines and conversational workflows that increased user opt-ins and enhanced transparency around data tracking.
+                </p>
+              </div>
+            </div>
 
             {/* UMD */}
             <div className="relative flex items-start">
