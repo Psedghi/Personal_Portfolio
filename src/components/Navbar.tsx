@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
     const pathname = usePathname(); // Get the current path
@@ -63,6 +64,35 @@ const Navbar = () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+
+    const buttonVariants = {
+        hidden: {
+            opacity: 0,
+            y: 20,
+            scale: 0.8
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                type: "spring",
+                stiffness: 150,
+                damping: 20
+            }
+        },
+        hover: {
+            scale: 1.1,
+            transition: {
+                type: "spring",
+                stiffness: 200,
+                damping: 15
+            }
+        },
+        tap: {
+            scale: 0.95
+        }
+    };
 
     return (
         <>
@@ -194,16 +224,36 @@ const Navbar = () => {
             </header>
 
             {/* Scroll to Top Button */}
-            {showScrollTop && (
-                <button
-                    onClick={scrollToTop}
-                    className="fixed bottom-4 right-4 bg-[#A53F2B] text-[#F0FFCE] p-3 rounded-full shadow-lg z-50 hover:bg-[#F0FFCE] hover:text-[#A53F2B] transition-all duration-300"
-                    aria-label="Scroll to top"
-                >
-                    ↑
-                </button>
-            )}
-
+            <AnimatePresence>
+                {showScrollTop && (
+                    <motion.button
+                        onClick={scrollToTop}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={buttonVariants}
+                        whileHover="hover"
+                        whileTap="tap"
+                        className="fixed bottom-4 md:bottom-8 right-4 md:right-8 bg-[#A53F2B] text-[#F0FFCE] p-3 md:p-4 rounded-full shadow-lg z-50 hover:bg-[#F0FFCE] hover:text-[#A53F2B] transition-colors duration-300 flex items-center justify-center group"
+                        aria-label="Scroll to top"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 md:h-6 md:w-6 transform transition-transform duration-300 group-hover:translate-y-[-2px]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 10l7-7m0 0l7 7m-7-7v18"
+                            />
+                        </svg>
+                    </motion.button>
+                )}
+            </AnimatePresence>
         </>
     );
 };
