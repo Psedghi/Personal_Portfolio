@@ -1,14 +1,12 @@
 "use client"; // Needed for client-side animations
 
 import Navbar from "@/components/Navbar";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function About() {
-  const [isReady, setIsReady] = useState(false);
-
   useEffect(() => {
-    setIsReady(true); // Trigger the animation on mount
+    // Empty useEffect for initial animation
   }, []);
 
   const containerVariants = {
