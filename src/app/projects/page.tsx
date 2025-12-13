@@ -231,7 +231,7 @@ export default function Projects() {
                 className="text-lg md:text-xl mb-6"
                 style={{ fontFamily: "DejaVuSans, sans-serif" }}
               >
-                I designed and developed a website for my family's store, The Red Bean, located in the heart of downtown Annapolis, Maryland. Built using React, HTML, CSS, and JavaScript, the site has attracted over <b><u>40,000</u></b> visitors, showcasing our unique offerings and engaging with our community. If you're in the area, we'd love for you to stop by and experience it in person!
+                I designed and developed a website for my family's store, The Red Bean, located in the heart of downtown Annapolis, Maryland. Built using React, HTML, CSS, and JavaScript, the site has attracted over <b><u>100,000</u></b> visitors, showcasing our unique offerings and engaging with our community. If you're in the area, we'd love for you to stop by and experience it in person!
               </p>
               <motion.a
                 href="https://theredbeancafe.com/"
