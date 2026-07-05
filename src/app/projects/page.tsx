@@ -67,7 +67,7 @@ export default function Projects() {
   return (
     <main className="bg-glow relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 pb-24 pt-28 md:pt-36">
-        <SectionHeading eyebrow="My Work" title="Selected Projects" />
+        <SectionHeading eyebrow="My Work" title="Highlighted Projects" />
 
         <div className="mt-20 space-y-24 md:space-y-28">
           {PROJECTS.map((project, i) => {
