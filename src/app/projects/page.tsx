@@ -67,7 +67,7 @@ export default function Projects() {
   return (
     <main className="bg-glow relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 pb-24 pt-28 md:pt-36">
-        <SectionHeading eyebrow="02 — Work" title="Selected Projects" />
+        <SectionHeading eyebrow="My Work" title="Selected Projects" />
 
         <div className="mt-20 space-y-24 md:space-y-28">
           {PROJECTS.map((project, i) => {
@@ -104,10 +104,7 @@ export default function Projects() {
 
                   {/* Description */}
                   <div className="w-full md:w-1/2">
-                    <p className="font-mono text-xs text-cream/40">
-                      {String(i + 1).padStart(2, "0")}
-                    </p>
-                    <h2 className="mt-2 font-display text-2xl font-bold tracking-tight md:text-3xl">
+                    <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
                       {project.title}
                     </h2>
                     <ul className="mt-4 flex flex-wrap gap-2">

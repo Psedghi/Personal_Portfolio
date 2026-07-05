@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <main className="bg-glow relative flex min-h-screen items-center overflow-hidden">
       <div className="mx-auto w-full max-w-6xl px-6 py-32">
-        <SectionHeading eyebrow="03 — Contact" title="Let's connect" align="center" />
+        <SectionHeading eyebrow="Get In Touch" title="Let's connect" align="center" />
 
         <Reveal delay={0.2} className="mx-auto mt-6 max-w-xl text-center">
           <p className="text-base leading-relaxed text-cream/60 md:text-lg">

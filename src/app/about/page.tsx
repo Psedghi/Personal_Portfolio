@@ -2,7 +2,6 @@
 
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-
 const EXPERIENCE = [
   {
     logo: "/microsoft-logo.png",
@@ -107,19 +106,19 @@ export default function About() {
   return (
     <main className="bg-glow relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 pb-24 pt-28 md:pt-36">
-        <SectionHeading eyebrow="01 — About" title="About Parsa" />
+        <SectionHeading eyebrow="About Me" title="About Parsa" />
 
         {/* Bio */}
         <div className="mt-14 grid gap-10 md:grid-cols-[1fr_260px]">
           <Reveal>
-            <div className="glass rounded-2xl p-8 md:p-10">
-              <p className="text-base leading-relaxed text-cream/80 md:text-lg">
+            <div className="rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-10">
+              <p className="text-base leading-relaxed md:text-lg">
                 My name is Parsa Sedghi, and I am a junior at the{" "}
                 <a
                   href="https://www.umd.edu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-underline font-medium text-rust-bright"
+                  className="link-underline font-medium text-rust"
                 >
                   University of Maryland
                 </a>{" "}
@@ -130,7 +129,7 @@ export default function About() {
                   href="https://www.rhsmith.umd.edu/quest"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-underline font-medium text-rust-bright"
+                  className="link-underline font-medium text-rust"
                 >
                   QUEST Honors Program
                 </a>
@@ -139,7 +138,7 @@ export default function About() {
                 experiential learning, teamwork, and creating innovative solutions to
                 complex challenges.
               </p>
-              <p className="mt-5 text-base leading-relaxed text-cream/80 md:text-lg">
+              <p className="mt-5 text-base leading-relaxed md:text-lg">
                 With a unique combination of creativity, logic, and technical expertise, I
                 thrive on working with wonderful people to tackle challenging projects and
                 build intuitive products. Whether it&apos;s through coding, designing, or
@@ -152,16 +151,16 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <div className="glass flex h-full flex-col justify-between gap-8 rounded-2xl p-8">
+            <div className="flex h-full flex-col justify-between gap-8 rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
               <div>
-                <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-rust-bright">
+                <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
                   Interests
                 </h2>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {INTERESTS.map((interest) => (
                     <li
                       key={interest}
-                      className="rounded-full border border-cream/15 px-3 py-1 font-mono text-xs text-cream/70"
+                      className="rounded-full border border-cocoa/30 px-3 py-1 font-mono text-xs text-cocoa/80"
                     >
                       {interest}
                     </li>
@@ -169,13 +168,13 @@ export default function About() {
                 </ul>
               </div>
               <div>
-                <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-rust-bright">
+                <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
                   Get in touch
                 </h2>
                 <div className="mt-4 flex flex-col gap-2 text-sm">
                   <a
                     href="mailto:psedghistem2022@gmail.com"
-                    className="link-underline w-fit text-cream/80"
+                    className="link-underline w-fit font-medium text-rust"
                   >
                     Email me
                   </a>
@@ -183,7 +182,7 @@ export default function About() {
                     href="https://linkedin.com/in/parsa-sedghi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="link-underline w-fit text-cream/80"
+                    className="link-underline w-fit font-medium text-rust"
                   >
                     LinkedIn
                   </a>
@@ -261,112 +260,100 @@ export default function About() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            <Reveal>
-              <div className="glass h-full rounded-2xl p-7">
-                <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust-bright">
-                  Education
-                </h3>
-                <p className="mt-4 font-display text-lg font-bold">
-                  University of Maryland
-                </p>
-                <ul className="mt-4 space-y-3 text-sm leading-relaxed text-cream/70">
-                  <li>
-                    <b className="text-cream/90">Dual Degree:</b>{" "}
-                    <a
-                      href="https://www.rhsmith.umd.edu/programs/undergraduate/academics/academic-majors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-underline text-rust-bright"
-                    >
-                      B.S. Operations Management &amp; Business Analytics
-                    </a>{" "}
-                    +{" "}
-                    <a
-                      href="https://www.cs.umd.edu/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-underline text-rust-bright"
-                    >
-                      B.S. Computer Science
-                    </a>
-                  </li>
-                  <li>
-                    <b className="text-cream/90">Minor:</b>{" "}
-                    <a
-                      href="https://aces.umd.edu/minor"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-underline text-rust-bright"
-                    >
-                      Cybersecurity
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.rhsmith.umd.edu/quest"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-underline text-rust-bright"
-                    >
-                      QUEST Honors Program
-                    </a>
-                  </li>
-                  <li>
-                    <b className="text-cream/90">Activities:</b> Hack4Impact, Omicron
-                    Delta Kappa, Computer Science Advisory Board, Startup Shell
-                  </li>
-                </ul>
-              </div>
-            </Reveal>
+          <Reveal className="mt-14">
+            <div className="rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-10">
+              {/* Education */}
+              <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+                Education
+              </h3>
+              <p className="mt-3 font-display text-xl font-bold md:text-2xl">
+                University of Maryland
+              </p>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed md:text-base">
+                <li>
+                  <b>Dual Degree:</b>{" "}
+                  <a
+                    href="https://www.cs.umd.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline font-medium text-rust"
+                  >
+                    B.S. Computer Science
+                  </a>{" "}
+                  +{" "}
+                  <a
+                    href="https://www.rhsmith.umd.edu/programs/undergraduate/academics/academic-majors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline font-medium text-rust"
+                  >
+                    B.S. Operations Management &amp; Business Analytics
+                  </a>
+                </li>
+                <li>
+                  <b>Minor:</b>{" "}
+                  <a
+                    href="https://aces.umd.edu/minor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline font-medium text-rust"
+                  >
+                    Cybersecurity
+                  </a>
+                </li>
+                <li>
+                  <b>Honors:</b>{" "}
+                  <a
+                    href="https://www.rhsmith.umd.edu/quest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline font-medium text-rust"
+                  >
+                    QUEST Honors Program
+                  </a>
+                </li>
+                <li>
+                  <b>Activities:</b> Hack4Impact, Omicron Delta Kappa, Computer
+                  Science Advisory Board, Startup Shell
+                </li>
+              </ul>
 
-            <Reveal delay={0.1}>
-              <div className="glass h-full rounded-2xl p-7">
-                <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust-bright">
-                  Certifications
-                </h3>
-                <ul className="mt-4 space-y-3 text-sm leading-relaxed">
-                  {CERTIFICATIONS.map(({ label, href }) => (
-                    <li key={label}>
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-underline text-cream/80"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
+              <div className="my-8 h-px bg-cocoa/15" aria-hidden="true" />
 
-            <Reveal delay={0.2}>
-              <div className="glass h-full rounded-2xl p-7">
-                <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust-bright">
-                  Skills
-                </h3>
-                <div className="mt-4 space-y-5">
-                  {Object.entries(SKILLS).map(([group, items]) => (
-                    <div key={group}>
-                      <p className="text-sm font-bold text-cream/90">{group}</p>
-                      <ul className="mt-2 flex flex-wrap gap-1.5">
-                        {items.map((skill) => (
-                          <li
-                            key={skill}
-                            className="rounded-full border border-cream/15 px-2.5 py-0.5 font-mono text-[11px] text-cream/70"
-                          >
-                            {skill}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-          </div>
+              {/* Certifications */}
+              <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+                Certifications
+              </h3>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed md:text-base">
+                {CERTIFICATIONS.map(({ label, href }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline font-medium text-rust"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="my-8 h-px bg-cocoa/15" aria-hidden="true" />
+
+              {/* Skills */}
+              <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+                Skills
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed md:text-base">
+                {Object.entries(SKILLS).map(([group, items]) => (
+                  <li key={group}>
+                    <b>{group}:</b> {items.join(", ")}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
         </div>
       </div>
     </main>
