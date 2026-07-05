@@ -1,245 +1,181 @@
-"use client"; // Mark as a Client Component
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/utils/merge";
+
+const NAV_LINKS = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+];
 
 const Navbar = () => {
-    const pathname = usePathname(); // Get the current path
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-    const [showScrollTop, setShowScrollTop] = useState(false); // Controls visibility of scroll-to-top button
-    const navbarRef = useRef(null);
-
-    const isActive = (path) => pathname === path;
-
-    const toggleMenu = () => setIsOpen(!isOpen);
+    const [showScrollTop, setShowScrollTop] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const navbarRef = useRef<HTMLElement>(null);
 
     // Close the menu when the pathname changes
     useEffect(() => {
         setIsOpen(false);
     }, [pathname]);
 
-    // Track scroll to toggle scroll-to-top button visibility
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 300) {
-                setShowScrollTop(true);
-            } else {
-                setShowScrollTop(false);
-            }
-
-            // Close the menu if the scroll position exceeds a threshold
-            if (window.scrollY > 500) {
-                setIsOpen(false);
-            }
+            setScrolled(window.scrollY > 10);
+            setShowScrollTop(window.scrollY > 300);
+            if (window.scrollY > 500) setIsOpen(false);
         };
 
         window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-    // Scroll to the top of the page
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
 
     // Close the menu if clicking outside the navbar
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
                 setIsOpen(false);
             }
         };
 
         document.addEventListener("mousedown", handleClickOutside);
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    const buttonVariants = {
-        hidden: {
-            opacity: 0,
-            y: 20,
-            scale: 0.8
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                type: "spring",
-                stiffness: 150,
-                damping: 20
-            }
-        },
-        hover: {
-            scale: 1.1,
-            transition: {
-                type: "spring",
-                stiffness: 200,
-                damping: 15
-            }
-        },
-        tap: {
-            scale: 0.95
-        }
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     return (
         <>
             <header
                 ref={navbarRef}
-                className="bg-[#280004] sticky top-0 z-50 w-full py-4 px-6 lg:px-12 text-[#F0FFCE] text-xl"
+                className={cn(
+                    "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
+                    scrolled || isOpen
+                        ? "border-cream/10 bg-night/80 backdrop-blur-md"
+                        : "border-transparent bg-transparent"
+                )}
             >
-                <div className="flex justify-between items-center">
-                    {/* Logo */}
+                <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+                    {/* Wordmark */}
                     <Link
                         href="/"
-                        className="hover:text-[#A53F2B] duration-500 relative group cursor-pointer"
+                        className="group font-display text-sm font-bold tracking-[0.25em] text-cream transition-colors duration-300 hover:text-rust-bright"
                     >
-                        <span className="font-bold tracking-widest relative inline-block">
-                            PARSA SEDGHI
+                        PARSA SEDGHI
+                        <span className="text-rust-bright transition-colors duration-300 group-hover:text-cream">
+                            .
                         </span>
                     </Link>
 
-                    {/* Hamburger Menu for Small Screens */}
-                    <div
-                        className="md:hidden cursor-pointer"
-                        onClick={toggleMenu}
-                        aria-label="Toggle navigation menu"
-                    >
-                        <div className={`hamburger ${isOpen ? "open" : ""}`}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-
-                    {/* Navigation Links */}
-                    <nav className="hidden md:block space-x-4 text-sm lg:text-base font-normal">
-                        <Link
-                            href="/"
-                            className={`relative group cursor-pointer ${isActive("/") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                                }`}
-                        >
-                            HOME
-                            <span
-                                className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#F0FFCE] group-hover:w-full transition-all duration-300 ease-in-out"
-                                aria-hidden="true"
-                            ></span>
-                        </Link>
-                        <span>/</span>
-                        <Link
-                            href="/about"
-                            className={`relative group cursor-pointer ${isActive("/about") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                                }`}
-                        >
-                            ABOUT
-                            <span
-                                className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#F0FFCE] group-hover:w-full transition-all duration-300 ease-in-out"
-                                aria-hidden="true"
-                            ></span>
-                        </Link>
-                        <span>/</span>
-                        <Link
-                            href="/projects"
-                            className={`relative group cursor-pointer ${isActive("/projects") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                                }`}
-                        >
-                            PROJECTS
-                            <span
-                                className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#F0FFCE] group-hover:w-full transition-all duration-300 ease-in-out"
-                                aria-hidden="true"
-                            ></span>
-                        </Link>
-                        <span>/</span>
-                        <Link
-                            href="/contact"
-                            className={`relative group cursor-pointer ${isActive("/contact") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                                }`}
-                        >
-                            CONTACT
-                            <span
-                                className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#F0FFCE] group-hover:w-full transition-all duration-300 ease-in-out"
-                                aria-hidden="true"
-                            ></span>
-                        </Link>
+                    {/* Desktop nav */}
+                    <nav className="hidden items-center gap-8 md:flex">
+                        {NAV_LINKS.map(({ href, label }) => {
+                            const active = pathname === href;
+                            return (
+                                <Link
+                                    key={href}
+                                    href={href}
+                                    className={cn(
+                                        "relative py-1 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-300",
+                                        active ? "text-cream" : "text-cream/50 hover:text-cream"
+                                    )}
+                                >
+                                    {label}
+                                    {active && (
+                                        <motion.span
+                                            layoutId="nav-underline"
+                                            className="absolute inset-x-0 -bottom-0.5 h-px bg-rust-bright"
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
                     </nav>
+
+                    {/* Hamburger */}
+                    <button
+                        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle navigation menu"
+                        aria-expanded={isOpen}
+                    >
+                        <span
+                            className={cn(
+                                "h-0.5 w-6 bg-cream transition-all duration-300",
+                                isOpen && "translate-y-2 rotate-45"
+                            )}
+                        />
+                        <span
+                            className={cn(
+                                "h-0.5 w-6 bg-cream transition-all duration-300",
+                                isOpen && "opacity-0"
+                            )}
+                        />
+                        <span
+                            className={cn(
+                                "h-0.5 w-6 bg-cream transition-all duration-300",
+                                isOpen && "-translate-y-2 -rotate-45"
+                            )}
+                        />
+                    </button>
                 </div>
 
-                {/* Dropdown Menu for Small Screens */}
-                <div
-                    className={`md:hidden fixed top-16 right-0 left-0 bg-[#280004] shadow-lg rounded-md overflow-hidden transform ${isOpen ? "max-h-screen" : "max-h-0"
-                        } transition-all duration-500 ease-in-out`}
-                >
-                    <Link
-                        href="/"
-                        onClick={() => setIsOpen(false)}
-                        className={`block px-6 py-3 ${isActive("/") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                            }`}
-                    >
-                        HOME
-                    </Link>
-                    <hr className="border-t border-[#F0FFCE]" />
-                    <Link
-                        href="/about"
-                        onClick={() => setIsOpen(false)}
-                        className={`block px-6 py-3 ${isActive("/about") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                            }`}
-                    >
-                        ABOUT
-                    </Link>
-                    <hr className="border-t border-[#F0FFCE]" />
-                    <Link
-                        href="/projects"
-                        onClick={() => setIsOpen(false)}
-                        className={`block px-6 py-3 ${isActive("/projects") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                            }`}
-                    >
-                        PROJECTS
-                    </Link>
-                    <hr className="border-t border-[#F0FFCE]" />
-                    <Link
-                        href="/contact"
-                        onClick={() => setIsOpen(false)}
-                        className={`block px-6 py-3 ${isActive("/contact") ? "text-[#A53F2B]" : "hover:text-[#A53F2B] duration-300"
-                            }`}
-                    >
-                        CONTACT
-                    </Link>
-                </div>
-
-                <div className="text-center">
-                    <hr className="border-t border-[#F0FFCE]" />
-                </div>
+                {/* Mobile menu */}
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.nav
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="overflow-hidden border-t border-cream/10 md:hidden"
+                        >
+                            <div className="flex flex-col px-6 py-4">
+                                {NAV_LINKS.map(({ href, label }) => (
+                                    <Link
+                                        key={href}
+                                        href={href}
+                                        onClick={() => setIsOpen(false)}
+                                        className={cn(
+                                            "border-b border-cream/5 py-3 font-mono text-sm uppercase tracking-[0.2em] transition-colors duration-300 last:border-b-0",
+                                            pathname === href
+                                                ? "text-rust-bright"
+                                                : "text-cream/60 hover:text-cream"
+                                        )}
+                                    >
+                                        {label}
+                                    </Link>
+                                ))}
+                            </div>
+                        </motion.nav>
+                    )}
+                </AnimatePresence>
             </header>
 
-            {/* Scroll to Top Button */}
+            {/* Scroll to top */}
             <AnimatePresence>
                 {showScrollTop && (
                     <motion.button
                         onClick={scrollToTop}
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
-                        variants={buttonVariants}
-                        whileHover="hover"
-                        whileTap="tap"
-                        className="fixed bottom-4 md:bottom-8 right-4 md:right-8 bg-[#A53F2B] text-[#F0FFCE] p-3 md:p-4 rounded-full shadow-lg z-50 hover:bg-[#F0FFCE] hover:text-[#A53F2B] transition-colors duration-300 flex items-center justify-center group"
+                        initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 20, scale: 0.8 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="glass fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full text-cream transition-colors duration-300 hover:border-rust hover:text-rust-bright md:bottom-8 md:right-8"
                         aria-label="Scroll to top"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 md:h-6 md:w-6 transform transition-transform duration-300 group-hover:translate-y-[-2px]"
+                            className="h-5 w-5"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"

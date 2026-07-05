@@ -1,144 +1,69 @@
-"use client"; // Needed for client-side rendering
+"use client";
 
-import Navbar from "@/components/Navbar";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
+import { FaLinkedin, FaGithub, FaEnvelope, FaArrowRight } from "react-icons/fa";
 
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+const CHANNELS = [
+  {
+    icon: FaEnvelope,
+    label: "Email",
+    value: "psedghistem2022@gmail.com",
+    href: "mailto:psedghistem2022@gmail.com",
+    cta: "Send a message",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    value: "in/parsa-sedghi",
+    href: "https://linkedin.com/in/parsa-sedghi",
+    cta: "Connect with me",
+  },
+  {
+    icon: FaGithub,
+    label: "GitHub",
+    value: "@psedghi",
+    href: "https://github.com/psedghi",
+    cta: "See my code",
+  },
+];
 
 export default function Contact() {
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    setIsReady(true); // Trigger the animation on mount
-  }, []);
-
-  // Animation variants for the icons
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const iconVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    },
-    hover: {
-      scale: 1.2,
-      rotate: 10,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 15
-      }
-    },
-    tap: {
-      scale: 0.9
-    }
-  };
-
   return (
-    <div className="bg-[#280004] text-[#F0FFCE] flex flex-col min-h-screen w-full font-sans">
-      {/* Navbar */}
-      <Navbar />
+    <main className="bg-glow relative flex min-h-screen items-center overflow-hidden">
+      <div className="mx-auto w-full max-w-6xl px-6 py-32">
+        <SectionHeading eyebrow="03 — Contact" title="Let's connect" align="center" />
 
-      <main
-        className={`flex-grow flex flex-col items-center justify-center px-4 md:px-12 transition-opacity duration-1000 ${isReady ? "opacity-100 animate-fadeIn" : "opacity-0"
-          }`}
-      >
-        {/* Title Section */}
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className={`text-4xl md:text-6xl lg:text-[100px] font-bold tracking-widest text-center mb-10`}
-          style={{ fontFamily: "Helvetica, sans-serif", letterSpacing: "-0.02em" }}
-        >
-          CONTACT ME
-        </motion.h1>
-        <motion.hr
-          initial={{ width: 0 }}
-          animate={{ width: "33.333333%" }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="border-t-2 border-[#F0FFCE] mb-12"
-        />
+        <Reveal delay={0.2} className="mx-auto mt-6 max-w-xl text-center">
+          <p className="text-base leading-relaxed text-cream/60 md:text-lg">
+            Feel free to reach out through any of the following platforms — I&apos;m
+            always happy to talk about new opportunities, projects, or ideas.
+          </p>
+        </Reveal>
 
-        {/* Contact Section */}
-        <div className="flex flex-col items-center space-y-6 w-full max-w-4xl">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg md:text-xl text-center"
-            style={{ fontFamily: "DejaVuSans, sans-serif" }}
-          >
-            Feel free to reach out to me through any of the following platforms!
-          </motion.p>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="flex space-x-8 mt-6"
-          >
-            {/* Email */}
-            <motion.a
-              href="mailto:psedghistem2022@gmail.com"
-              variants={iconVariants}
-              whileHover="hover"
-              whileTap="tap"
-              className="text-[#F0FFCE] text-4xl md:text-5xl lg:text-7xl hover:text-[#A53F2B] transition-colors duration-300"
-              aria-label="Email"
-            >
-              <FaEnvelope />
-            </motion.a>
-            {/* LinkedIn */}
-            <motion.a
-              href="https://linkedin.com/in/parsa-sedghi"
-              target="_blank"
-              rel="noopener noreferrer"
-              variants={iconVariants}
-              whileHover="hover"
-              whileTap="tap"
-              className="text-[#F0FFCE] text-4xl md:text-5xl lg:text-7xl hover:text-[#A53F2B] transition-colors duration-300"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </motion.a>
-            {/* GitHub */}
-            <motion.a
-              href="https://github.com/psedghi"
-              target="_blank"
-              rel="noopener noreferrer"
-              variants={iconVariants}
-              whileHover="hover"
-              whileTap="tap"
-              className="text-[#F0FFCE] text-4xl md:text-5xl lg:text-7xl hover:text-[#A53F2B] transition-colors duration-300"
-              aria-label="GitHub"
-            >
-              <FaGithub />
-            </motion.a>
-          </motion.div>
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+          {CHANNELS.map(({ icon: Icon, label, value, href, cta }, i) => (
+            <Reveal key={label} delay={0.1 + i * 0.1}>
+              <a
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="glass group flex h-full flex-col rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-rust/60 hover:shadow-[0_10px_40px_rgba(165,63,43,0.25)]"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-cream/15 text-cream/80 transition-colors duration-300 group-hover:border-rust group-hover:text-rust-bright">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h2 className="mt-6 font-display text-xl font-bold">{label}</h2>
+                <p className="mt-1 break-all font-mono text-xs text-cream/50">{value}</p>
+                <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-cream/60 transition-colors duration-300 group-hover:text-rust-bright">
+                  {cta}
+                  <FaArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </a>
+            </Reveal>
+          ))}
         </div>
-      </main>
-
-      {/* Footer Section */}
-      <footer className="bg-[#280004] text-center text-sm md:text-base py-4 mt-auto" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
-        <p>&copy; 2024 Parsa Sedghi. All rights reserved.</p>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }
