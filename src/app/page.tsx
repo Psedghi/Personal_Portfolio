@@ -183,23 +183,29 @@ export default function Home() {
             <span className="font-mono text-xs uppercase tracking-[0.3em]">
               Explore my work
             </span>
-            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-cream/30 bg-cream/5 transition-all duration-300 group-hover:border-rust-bright group-hover:bg-rust/20 group-hover:shadow-[0_0_25px_rgba(199,90,63,0.4)]">
-              <motion.svg
-                animate={{ x: [0, 4, 0] }}
-                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </motion.svg>
+            <span className="relative flex h-12 w-12 items-center justify-center">
+              <span
+                className="absolute -left-1.5 -top-1.5 h-full w-full rounded-full border-2 border-rust transition-transform duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1"
+                aria-hidden="true"
+              />
+              <span className="relative flex h-12 w-12 items-center justify-center rounded-full border border-cream/30 bg-cream/5 transition-all duration-300 group-hover:border-rust-bright group-hover:bg-rust/20 group-hover:shadow-[0_0_25px_rgba(199,90,63,0.4)]">
+                <motion.svg
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </motion.svg>
+              </span>
             </span>
           </Link>
         </motion.div>

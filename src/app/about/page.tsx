@@ -4,20 +4,29 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 const EXPERIENCE = [
   {
+    logo: "/google-logo.webp",
+    company: "Google",
+    href: "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
+    role: "Software Engineer",
+    meta: "Mountain View, CA | Present",
+    blurb:
+    "Building payment infrastructure that powers seamless, secure transaction experiences for millions of users across Google Pay surfaces."
+  },
+  {
     logo: "/microsoft-logo.png",
     company: "Microsoft",
     href: "https://datacenters.microsoft.com/",
-    role: "Incoming Summer Intern",
-    meta: "Redmond, WA — Summer 2025",
+    role: "Engineering Intern",
+    meta: "Redmond, WA | Summer 2025",
     blurb:
-      "Set to join the Cloud Operations + Innovations team to develop scalable internal tools and improve infrastructure reliability. Focused on delivering cross-functional engineering solutions for global enterprise customers.",
+    "Built ML-powered automation and real-time observability tools (Python, Azure Functions, TypeScript) to provision, replace, and monitor secure datacenter devices at scale, using predictive anomaly detection to cut manual engineering work."
   },
   {
     logo: "/meta_icon.jpg",
     company: "Meta",
     href: "https://www.meta.com/",
     role: "Software Engineering Intern",
-    meta: "College Park, MD — Spring 2025",
+    meta: "College Park, MD | Spring 2025",
     blurb:
       "Built an AI-powered onboarding agent for XR devices for Meta Reality Labs using TypeScript, React Native, and LLM APIs, improving user understanding of privacy policies. Developed RAG pipelines and conversational workflows that increased user opt-ins and enhanced transparency around data tracking.",
   },
@@ -26,7 +35,7 @@ const EXPERIENCE = [
     company: "UMD",
     href: "https://it.umd.edu/",
     role: "Enterprise Software Engineering Intern",
-    meta: "College Park, MD — Summer 2022 – Present",
+    meta: "College Park, MD | Summer 2022 – Spring 2026",
     blurb:
       "Developed secure applications and contributed to the scalability of enterprise-level systems for the university.",
   },
@@ -35,25 +44,16 @@ const EXPERIENCE = [
     company: "BlackRock",
     href: "https://www.blackrock.com/us/individual",
     role: "Software Engineering Intern",
-    meta: "Wilmington, DE — Summer 2024",
+    meta: "Wilmington, DE | Summer 2024",
     blurb:
       "Worked on operational and financial engineering technologies to improve internal systems and streamline workflow processes.",
-  },
-  {
-    logo: "/quest.png",
-    company: "QUEST Honors / Wodify",
-    href: "https://www.rhsmith.umd.edu/quest",
-    role: "Data Science Intern",
-    meta: "Remote — Spring 2024",
-    blurb:
-      "Analyzed customer behavior data and implemented predictive models to enhance user engagement and retention.",
   },
   {
     logo: "/janeStreet.jpeg",
     company: "Jane Street",
     href: "https://www.janestreet.com/join-jane-street/programs-and-events/in-focus/",
     role: "IN FOCUS Software Engineering Extern",
-    meta: "New York, NY — Winter 2024",
+    meta: "New York, NY | Winter 2024",
     blurb:
       "Gained proficiency in functional programming with OCaml, developed a Python-based stock trading bot, and applied quantitative analysis and probability theories in simulated trading exercises to deepen my understanding of market dynamics and trading strategies.",
   },
@@ -62,7 +62,7 @@ const EXPERIENCE = [
     company: "Consortium Networks",
     href: "https://consortium.net/",
     role: "Cyber Analyst Intern",
-    meta: "Remote — Summer 2023",
+    meta: "Remote | Summer 2023",
     blurb:
       "Conducted product and penetration testing, developed incident response plans, and implemented advanced security measures to enhance the network security posture of Fortune 500 clients and other organizations.",
   },
@@ -71,7 +71,7 @@ const EXPERIENCE = [
     company: "Best Buy",
     href: "https://jobs.bestbuy.com/bby?id=item_detail&content=about_us",
     role: "Sales Associate",
-    meta: "Annapolis, MD — Fall 2021 – Winter 2023",
+    meta: "Annapolis, MD | Fall 2021 – Winter 2023",
     blurb:
       "Provided personalized technology solutions, delivered exceptional customer service, and exceeded sales goals by effectively communicating product benefits and tailoring recommendations to customer needs.",
   },
@@ -110,8 +110,12 @@ export default function About() {
 
         {/* Bio */}
         <div className="mt-14 grid gap-10 md:grid-cols-[1fr_260px]">
-          <Reveal>
-            <div className="rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-10">
+          <Reveal className="relative">
+            <div
+              className="absolute -left-3 -top-3 h-full w-full rounded-2xl border-4 border-rust"
+              aria-hidden="true"
+            />
+            <div className="relative rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-10">
               <p className="text-base leading-relaxed md:text-lg">
                 My name is Parsa Sedghi, and I am a junior at the{" "}
                 <a
@@ -150,10 +154,14 @@ export default function About() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            <div className="flex h-full flex-col justify-between gap-8 rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+          <Reveal delay={0.15} className="relative">
+            <div
+              className="absolute -left-3 -top-3 h-full w-full rounded-2xl border-4 border-rust"
+              aria-hidden="true"
+            />
+            <div className="relative flex h-full flex-col justify-between gap-8 rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
               <div>
-                <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+                <h2 className="font-display text-sm font-bold uppercase tracking-wide text-rust">
                   Interests
                 </h2>
                 <ul className="mt-4 flex flex-wrap gap-2">
@@ -168,7 +176,7 @@ export default function About() {
                 </ul>
               </div>
               <div>
-                <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+                <h2 className="font-display text-sm font-bold uppercase tracking-wide text-rust">
                   Get in touch
                 </h2>
                 <div className="mt-4 flex flex-col gap-2 text-sm">
@@ -260,10 +268,14 @@ export default function About() {
             </p>
           </Reveal>
 
-          <Reveal className="mt-14">
-            <div className="rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-10">
+          <Reveal className="relative mt-14">
+            <div
+              className="absolute -left-3 -top-3 h-full w-full rounded-2xl border-4 border-rust"
+              aria-hidden="true"
+            />
+            <div className="relative rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-10">
               {/* Education */}
-              <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+              <h3 className="font-display text-sm font-bold uppercase tracking-wide text-rust">
                 Education
               </h3>
               <p className="mt-3 font-display text-xl font-bold md:text-2xl">
@@ -321,7 +333,7 @@ export default function About() {
               <div className="my-8 h-px bg-cocoa/15" aria-hidden="true" />
 
               {/* Certifications */}
-              <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+              <h3 className="font-display text-sm font-bold uppercase tracking-wide text-rust">
                 Certifications
               </h3>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed md:text-base">
@@ -342,7 +354,7 @@ export default function About() {
               <div className="my-8 h-px bg-cocoa/15" aria-hidden="true" />
 
               {/* Skills */}
-              <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-rust">
+              <h3 className="font-display text-sm font-bold uppercase tracking-wide text-rust">
                 Skills
               </h3>
               <ul className="mt-3 space-y-2 text-sm leading-relaxed md:text-base">
