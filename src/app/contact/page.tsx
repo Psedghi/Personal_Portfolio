@@ -36,7 +36,7 @@ export default function Contact() {
 
         <Reveal delay={0.2} className="mx-auto mt-6 max-w-xl text-center">
           <p className="text-base leading-relaxed text-cream/60 md:text-lg">
-            Feel free to reach out through any of the following platforms — I&apos;m
+            Feel free to reach out through any of the following platforms! I&apos;m
             always happy to talk about new opportunities, projects, or ideas.
           </p>
         </Reveal>
