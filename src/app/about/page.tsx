@@ -117,7 +117,7 @@ export default function About() {
             />
             <div className="relative rounded-2xl bg-sand p-8 text-cocoa shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-10">
               <p className="text-base leading-relaxed md:text-lg">
-                My name is Parsa Sedghi, and I am a junior at the{" "}
+                My name is Parsa Sedghi, and I recently graduated from the{" "}
                 <a
                   href="https://www.umd.edu"
                   target="_blank"
@@ -126,9 +126,9 @@ export default function About() {
                 >
                   University of Maryland
                 </a>{" "}
-                pursuing a dual degree in <i>Computer Science</i> and{" "}
+                where I pursued a dual degree in <i>Computer Science</i> and{" "}
                 <i>Operations Management/Business Analytics</i> as well as a minor in{" "}
-                <i>Cybersecurity</i>. I am also in the{" "}
+                <i>Cybersecurity</i>. I was also in the{" "}
                 <a
                   href="https://www.rhsmith.umd.edu/quest"
                   target="_blank"
@@ -137,7 +137,7 @@ export default function About() {
                 >
                   QUEST Honors Program
                 </a>
-                , where I have the unique opportunity to work on real-world,
+                , where I had the unique opportunity to work on real-world,
                 multidisciplinary projects each semester. The program emphasizes
                 experiential learning, teamwork, and creating innovative solutions to
                 complex challenges.
