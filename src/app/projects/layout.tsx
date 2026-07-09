@@ -1,6 +1,10 @@
 export const metadata = {
     title: "Projects - Parsa Sedghi",
     description: "Explore some of the projects that Parsa Sedghi has completed",
+    openGraph: {
+        title: "Projects - Parsa Sedghi",
+        description: "Explore some of the projects that Parsa Sedghi has completed",
+    },
 };
 
 export default function AboutLayout({

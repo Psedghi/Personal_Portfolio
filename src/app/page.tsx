@@ -2,242 +2,238 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import profilePicture from "public/profile-picture.jpg";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
+
+const HERO_LINES = [
+  { text: "IDEAS", outline: false },
+  { text: "INTO", outline: true },
+  { text: "IMPACT", outline: false },
+];
+
+const MARQUEE_ITEMS = [
+  "React",
+  "TypeScript",
+  "Python",
+  "Java",
+  "AWS",
+  "Machine Learning",
+  "Cybersecurity",
+  "Node.js",
+  "SQL",
+  "Docker",
+  "Vue.js",
+  "OCaml",
+  "Snowflake",
+  "Tableau",
+];
 
 export default function Home() {
-  // Animation variants for the three main words
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
+  // Spotlight that follows the cursor across the hero
+  const mouseX = useMotionValue(-1000);
+  const mouseY = useMotionValue(-1000);
+  const spotlight = useMotionTemplate`radial-gradient(560px circle at ${mouseX}px ${mouseY}px, rgba(199, 90, 63, 0.14), transparent 70%)`;
+
+  const lineVariants = {
+    hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.3,
+        delay: 0.15 + i * 0.15,
         type: "spring",
         stiffness: 100,
-        damping: 10
-      }
+        damping: 16,
+      },
     }),
     hover: {
       scale: 1.05,
-      y: -5,
+      x: 12,
       transition: {
         type: "spring",
         stiffness: 400,
-        damping: 20
-      }
-    }
-  };
-
-  // Animation variants for the profile image and box
-  const profileVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15
-      }
+        damping: 18,
+      },
     },
-    hover: {
-      scale: 1.02,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10
-      }
-    }
-  };
-
-  // Box outline animation variants
-  const boxVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { duration: 0.5 }
-    },
-    hover: {
-      x: -12,
-      y: -12,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15
-      }
-    }
-  };
-
-  // Bar animation variants
-  const barVariants = {
-    hidden: { width: 0 },
-    visible: {
-      width: "66.666667%",
-      transition: {
-        delay: 0.6,
-        duration: 0.8,
-        ease: [0.4, 0, 0.2, 1]
-      }
-    }
-  };
-
-  // Button animation variants
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.8,
-        type: "spring",
-        stiffness: 100,
-        damping: 15
-      }
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10
-      }
-    },
-    tap: {
-      scale: 0.95
-    }
   };
 
   return (
-    <div className="bg-[#280004] text-[#F0FFCE] flex flex-col min-h-screen font-sans">
-      <Navbar />
+    <main
+      className="bg-glow relative flex min-h-screen flex-col overflow-hidden"
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        mouseX.set(e.clientX - rect.left);
+        mouseY.set(e.clientY - rect.top);
+      }}
+    >
+      <div className="bg-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+      <motion.div
+        className="pointer-events-none absolute inset-0"
+        style={{ background: spotlight }}
+        aria-hidden="true"
+      />
 
-      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-12 pt-[4rem]">
-        <div className="flex flex-col md:flex-row items-center justify-center">
-          {/* Profile Picture and Orange Outline */}
+      <section className="relative mx-auto flex w-full max-w-6xl flex-grow flex-col justify-center px-6 pb-10 pt-28 md:pt-32">
+        <div className="grid items-center gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
+          {/* Portrait */}
           <motion.div
-            initial="hidden"
-            animate="visible"
-            whileHover="hover"
-            variants={profileVariants}
-            className="relative mb-8 md:mb-0 md:mr-12 group"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.02, rotate: -1 }}
+            transition={{ delay: 0.4, type: "spring", stiffness: 90, damping: 16 }}
+            className="group relative mx-auto w-56 md:w-full md:max-w-sm"
           >
-            <motion.div
-              variants={boxVariants}
-              className="absolute -top-4 -left-4 w-full h-full border-4 border-[#A53F2B] rounded-md"
+            <div
+              className="absolute -left-4 -top-4 h-full w-full rounded-2xl border-4 border-rust transition-transform duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2"
+              aria-hidden="true"
             />
-            <div className="relative">
-              <Image
-                src={profilePicture}
-                alt="Profile Picture"
-                className="rounded-md w-48 md:w-64 lg:w-72 h-auto"
-                width={288}
-                height={288}
-                priority
-                placeholder="blur"
-                sizes="(max-width: 768px) 192px, (max-width: 1024px) 256px, 288px"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
-              />
-            </div>
+            <div
+              className="absolute -inset-2 rounded-2xl bg-rust/20 blur-2xl transition-opacity duration-500 group-hover:opacity-80"
+              aria-hidden="true"
+            />
+            <Image
+              src={profilePicture}
+              alt="Portrait of Parsa Sedghi"
+              width={448}
+              height={448}
+              priority
+              placeholder="blur"
+              sizes="(max-width: 768px) 224px, 448px"
+              className="relative h-auto w-full rounded-2xl object-cover grayscale-[30%] transition-all duration-500 group-hover:grayscale-0"
+            />
           </motion.div>
 
+          {/* Intro */}
           <div className="text-center md:text-left">
-            <h1
-              className="font-bold leading-tight tracking-widest text-4xl md:text-6xl lg:text-[100px]"
-              style={{ fontFamily: "Helvetica, sans-serif" }}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 flex items-center justify-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-rust-bright md:justify-start"
             >
-              <motion.span
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                custom={0}
-                variants={textVariants}
-                className="block cursor-pointer"
-              >
-                BUILDING
-              </motion.span>
-              <motion.span
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                custom={1}
-                variants={textVariants}
-                className="block ml-2 md:ml-6 lg:ml-8 cursor-pointer"
-              >
-                SOFTWARE
-              </motion.span>
-              <motion.span
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                custom={2}
-                variants={textVariants}
-                className="block ml-4 md:ml-12 lg:ml-16 cursor-pointer"
-              >
-                INNOVATIONS
-              </motion.span>
+              <span className="hidden h-px w-8 bg-rust md:block" aria-hidden="true" />
+              Parsa Sedghi — Software Engineer
+            </motion.p>
+
+            <h1 className="font-display text-6xl font-bold leading-[0.95] tracking-tight md:text-8xl lg:text-9xl">
+              {HERO_LINES.map(({ text, outline }, i) => (
+                <motion.span
+                  key={text}
+                  custom={i}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                  variants={lineVariants}
+                  className={`block w-fit cursor-default transition-colors duration-300 ${
+                    outline ? "text-outline hover:text-rust-bright" : "hover:text-rust-bright"
+                  } mx-auto md:mx-0`}
+                >
+                  {text}
+                </motion.span>
+              ))}
             </h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.6 }}
+              className="mx-auto mt-6 max-w-md text-base leading-relaxed text-cream/60 md:mx-0 md:text-lg"
+            >
+              Computer Science &amp; Operations Research graduate from the University of
+              Maryland, building at the intersection of technology and business.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.6 }}
+              className="mt-10 flex flex-wrap items-center justify-center gap-4 md:justify-start"
+            >
+              <Link
+                href="/about"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-rust px-7 py-3 font-mono text-sm uppercase tracking-[0.15em] text-cream transition-shadow duration-300 hover:shadow-[0_0_35px_rgba(199,90,63,0.55)]"
+              >
+                <span
+                  className="absolute inset-0 origin-left scale-x-0 bg-gradient-to-r from-rust-bright to-cream transition-transform duration-300 ease-out group-hover:scale-x-100"
+                  aria-hidden="true"
+                />
+                <span className="relative z-10 inline-flex items-center gap-2 transition-colors duration-300 group-hover:text-night">
+                  About me
+                  <FaArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </Link>
+            </motion.div>
+
           </div>
         </div>
 
-        {/* Button Section */}
-        <div className="mt-12">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={barVariants}
-            className="text-center mb-6 mx-auto"
+        {/* Explore cue */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.3, duration: 0.8 }}
+          className="mt-14 flex justify-center md:mt-16"
+        >
+          <Link
+            href="/projects"
+            className="group flex flex-col items-center gap-3 text-cream/70 transition-colors duration-300 hover:text-cream"
           >
-            <hr className="border-t-2 border-[#F0FFCE]" />
-          </motion.div>
-          <Link href="/about">
-            <motion.button
-              initial="hidden"
-              animate="visible"
-              whileHover="hover"
-              whileTap="tap"
-              variants={buttonVariants}
-              className="px-6 md:px-8 py-2 md:py-3 border-2 border-[#F0FFCE] rounded-md text-[#F0FFCE] text-base md:text-lg lg:text-[40px] cursor-pointer relative overflow-hidden group"
-              style={{ fontFamily: "DejaVuSans, sans-serif" }}
-            >
-              <motion.span
-                className="absolute inset-0 bg-gradient-to-r from-[#A53F2B] to-[#F0FFCE] z-0"
-                initial={{ scaleX: 0 }}
-                whileHover={{ scaleX: 1 }}
-                transition={{ duration: 0.3 }}
-                style={{ originX: 0 }}
+            <span className="font-mono text-xs uppercase tracking-[0.3em]">
+              Explore my work
+            </span>
+            <span className="relative flex h-12 w-12 items-center justify-center">
+              <span
+                className="absolute inset-0 -m-1.5 rounded-full border-2 border-rust transition-transform duration-300 group-hover:scale-110"
+                aria-hidden="true"
               />
-              <span className="relative z-10 group-hover:text-[#280004] transition-colors duration-500">
-                LEARN ABOUT ME
+              <span className="relative flex h-12 w-12 items-center justify-center rounded-full border border-cream/30 bg-cream/5 transition-all duration-300 group-hover:border-rust-bright group-hover:bg-rust/20 group-hover:shadow-[0_0_25px_rgba(199,90,63,0.4)]">
+                <motion.svg
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </motion.svg>
               </span>
-            </motion.button>
+            </span>
           </Link>
-        </div>
+        </motion.div>
+      </section>
 
-        <div className="flex-grow"></div>
-      </main>
-
-      <footer className="bg-[#280004] text-center text-sm md:text-base py-4" style={{ fontFamily: "DejaVuSans, sans-serif" }}>
-        <div className="mb-2">
-          <a href="mailto:psedghistem2022@gmail.com" className="hover:text-[#A53F2B] transition-colors duration-300">
-            Email Me
-          </a>
-          {" | "}
-          <a href="https://linkedin.com/in/parsa-sedghi" target="_blank" className="hover:text-[#A53F2B] transition-colors duration-300">
-            LinkedIn
-          </a>
-          {" | "}
-          <a href="https://github.com/psedghi" target="_blank" className="hover:text-[#A53F2B] transition-colors duration-300">
-            GitHub
-          </a>
+      {/* Skills marquee */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+        className="relative border-t border-cream/10 py-5"
+      >
+        <div className="overflow-hidden whitespace-nowrap [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="flex w-max animate-marquee items-center gap-8 hover:[animation-play-state:paused]">
+            {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
+              <span
+                key={`${item}-${i}`}
+                className="flex items-center gap-8 font-mono text-xs uppercase tracking-[0.25em] text-cream/40 transition-colors duration-300 hover:text-rust-bright"
+              >
+                {item}
+                <span className="text-rust" aria-hidden="true">
+                  ✦
+                </span>
+              </span>
+            ))}
+          </div>
         </div>
-        <p>&copy; 2024 Parsa Sedghi. All rights reserved.</p>
-      </footer>
-    </div>
+      </motion.div>
+    </main>
   );
 }
