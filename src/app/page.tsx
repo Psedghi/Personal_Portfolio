@@ -140,7 +140,7 @@ export default function Home() {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="mx-auto mt-6 max-w-md text-base leading-relaxed text-cream/60 md:mx-0 md:text-lg"
             >
-              Computer Science &amp; Operations Research at the University of
+              Computer Science &amp; Operations Research graduate from the University of
               Maryland, building at the intersection of technology and business.
             </motion.p>
 
