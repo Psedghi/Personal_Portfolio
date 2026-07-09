@@ -185,7 +185,7 @@ export default function Home() {
             </span>
             <span className="relative flex h-12 w-12 items-center justify-center">
               <span
-                className="absolute -left-1.5 -top-1.5 h-full w-full rounded-full border-2 border-rust transition-transform duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1"
+                className="absolute inset-0 -m-1.5 rounded-full border-2 border-rust transition-transform duration-300 group-hover:scale-110"
                 aria-hidden="true"
               />
               <span className="relative flex h-12 w-12 items-center justify-center rounded-full border border-cream/30 bg-cream/5 transition-all duration-300 group-hover:border-rust-bright group-hover:bg-rust/20 group-hover:shadow-[0_0_25px_rgba(199,90,63,0.4)]">
